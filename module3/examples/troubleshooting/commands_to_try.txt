@@ -1,0 +1,16 @@
+# Module 3 troubleshooting — commands to try
+
+# Capture failing command to log (stdout + stderr)
+./failing_cmd.sh 2>&1 | tee debug.log
+echo $?
+
+# Inspect the log
+cat debug.log
+grep -i error debug.log
+grep -i fail debug.log
+head -5 debug.log
+tail -5 debug.log
+
+# Simulate "command not found"
+badcommand 2>&1 | tee notfound.log
+cat notfound.log

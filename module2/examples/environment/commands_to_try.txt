@@ -1,0 +1,29 @@
+# Module 2 environment — commands to try (copy-paste into terminal)
+
+# Key variables
+echo $HOME
+echo $USER
+echo $SHELL
+echo $PWD
+
+# PATH (colon-separated list of directories)
+echo $PATH
+
+# Which executable runs?
+which bash
+which ls
+which git
+which python
+which iverilog
+
+# List environment (sample)
+env | head -20
+printenv HOME
+
+# One-shot variable (this command only)
+MY_VAR=hello echo $MY_VAR
+
+# Session variable (until you close the terminal)
+export MY_VAR=hello
+echo $MY_VAR
+unset MY_VAR

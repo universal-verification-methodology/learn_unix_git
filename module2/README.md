@@ -16,10 +16,12 @@ module2/
 ├── README.md           # This file
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
-│   ├── file_types/     # ls -l, directories, files, symlinks
-│   ├── permissions/    # chmod, executable scripts
-│   ├── environment/    # PATH, which, env, echo $VAR
-│   └── dotfiles/       # Hidden files, ls -a, .gitignore
+│   ├── file_types/     # ls -l, regular files, dirs, symlinks, broken link
+│   ├── permissions/    # chmod, hello.sh, config.txt, chmod table
+│   ├── ownership/      # Owner/group in ls -l, explain_ls.sh
+│   ├── environment/    # PATH, which, env, inspect_env.sh, commands_to_try.txt
+│   ├── path_and_script/   # Why ./script.sh is needed, local_cmd.sh
+│   └── dotfiles/       # Hidden files, ls -a, .sample_rc, .gitignore
 └── exercises/          # Exercise instructions and optional scaffold
     └── README.md       # Exercise checklist and setup
 ```
@@ -48,17 +50,25 @@ module2/
    ./hello.sh
    ```
 
-4. **Try the environment example** (PATH, which):
+4. **Try the environment example** (PATH, which, inspect_env.sh):
    ```bash
    cd module2/examples/environment
-   echo $PATH
+   chmod u+x inspect_env.sh
+   ./inspect_env.sh
    which bash
    which git
    ```
 
-5. **More examples**: See `module2/examples/README.md` for dotfiles and full command lists.
+5. **Try PATH and scripts** (why ./ is needed):
+   ```bash
+   cd module2/examples/path_and_script
+   ./local_cmd.sh
+   local_cmd.sh
+   ```
 
-6. **Exercises**: See [module2/exercises/README.md](exercises/README.md) and [docs/MODULE2.md](../docs/MODULE2.md#exercises).
+6. **More examples**: See `module2/examples/README.md` for ownership, dotfiles, and full command lists.
+
+7. **Exercises**: See [module2/exercises/README.md](exercises/README.md) and [docs/MODULE2.md](../docs/MODULE2.md#exercises).
 
 ## Next Steps
 

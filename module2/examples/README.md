@@ -1,12 +1,14 @@
 # Module 2 Examples
 
-Hands-on examples for **Filesystem, Permissions & Environment**: file types, permissions, PATH/which/env, and hidden files.
+Hands-on examples for **Filesystem, Permissions & Environment**: file types, permissions, ownership, PATH/which/env, why `./` is needed, and hidden files.
 
 ---
 
 ## 1. File types (`file_types/`)
 
-Practice **ls -l** and **symbolic links**: regular files (`-`), directories (`d`), symlinks (`l`).
+Practice **ls -l** and **symbolic links**: regular files (`-`), directories (`d`), symlinks (`l`), and broken symlinks.
+
+**Layout**: `sample.txt`, `subdir/`, `my_symlink` → sample.txt, `broken_link` → missing target.
 
 **Try these** (from repo root):
 
@@ -16,15 +18,18 @@ ls -l
 ls -l my_symlink
 readlink my_symlink
 cat my_symlink
+readlink broken_link
 ```
 
-Optional: create a symlink with `ln -s sample.txt my_copy_link`, then `rm my_copy_link`. See `file_types/README.md` for details.
+See `file_types/README.md` for creating your own symlinks and interpreting `ls -l`.
 
 ---
 
 ## 2. Permissions (`permissions/`)
 
-Practice **chmod** and running an **executable script**.
+Practice **chmod** and running an **executable script**; optional chmod on a data file.
+
+**Layout**: `hello.sh` (script), `config.txt` (data file).
 
 **Try these**:
 
@@ -34,34 +39,81 @@ ls -l hello.sh
 chmod u+x hello.sh
 ls -l hello.sh
 ./hello.sh
+chmod 644 config.txt
+ls -l config.txt
 ```
 
-See `permissions/README.md` for why `./` is needed and what not to do with chmod.
+See `permissions/README.md` for why `./` is needed and chmod quick reference (644, 755, u+x).
 
 ---
 
-## 3. Environment (`environment/`)
+## 3. Ownership (`ownership/`)
 
-Practice **PATH**, **which**, and **env**.
+Practice **reading owner and group** in `ls -l` and comparing across directories.
+
+**Layout**: `myfile.txt`, `explain_ls.sh` (runnable helper).
 
 **Try these**:
 
 ```bash
-echo $HOME
-echo $PATH
-which bash
-which git
-which python
-env | head -15
+cd module2/examples/ownership
+ls -l
+chmod u+x explain_ls.sh
+./explain_ls.sh
+ls -l ~
+ls -l module2/examples/permissions
 ```
 
-See `environment/README.md` for one-shot and exported variables and toolchain context.
+See `ownership/README.md` for column-by-column interpretation of `ls -l`.
 
 ---
 
-## 4. Hidden files / dotfiles (`dotfiles/`)
+## 4. Environment (`environment/`)
+
+Practice **PATH**, **which**, and **env** with a runnable script and a command cheat sheet.
+
+**Layout**: `inspect_env.sh` (run after chmod u+x), `commands_to_try.txt` (copy-paste list).
+
+**Try these**:
+
+```bash
+cd module2/examples/environment
+chmod u+x inspect_env.sh
+./inspect_env.sh
+echo $PATH
+which bash
+which git
+env | head -10
+```
+
+See `environment/README.md` and `commands_to_try.txt` for one-shot/export variables and toolchain context.
+
+---
+
+## 5. PATH and scripts (`path_and_script/`)
+
+See **why you must use ./script.sh** to run a script in the current directory.
+
+**Layout**: `local_cmd.sh` (already executable).
+
+**Try these**:
+
+```bash
+cd module2/examples/path_and_script
+./local_cmd.sh
+local_cmd.sh
+echo $PATH
+```
+
+The second command typically fails with "command not found" because the current directory is not in PATH. See `path_and_script/README.md` for the full explanation.
+
+---
+
+## 6. Hidden files / dotfiles (`dotfiles/`)
 
 Practice **ls -a** and recognizing **dotfiles** and **dot-directories**.
+
+**Layout**: `visible.txt`, `.hidden_file`, `.sample_rc`, `.gitignore`, `.hidden_dir/`.
 
 **Try these**:
 
@@ -71,7 +123,8 @@ ls
 ls -a
 ls -la
 cat .hidden_file
-ls -a ~
+cat .sample_rc
+ls -a ~ | head -15
 ```
 
 See `dotfiles/README.md` for common dotfiles (`.git/`, `.bashrc`, `.gitignore`, etc.).

@@ -2,6 +2,28 @@
 
 Practice **viewing** and **changing** file permissions with `ls -l` and `chmod`, and run an executable script.
 
+## Layout
+
+```
+permissions/
+├── README.md     # this file
+├── hello.sh      # script — make executable with chmod u+x
+└── config.txt   # data file — practice chmod 644 / 600
+```
+
+## Try these (from repo root)
+
+```bash
+cd module2/examples/permissions
+ls -l
+ls -l hello.sh
+chmod u+x hello.sh
+ls -l hello.sh
+./hello.sh
+chmod 644 config.txt
+ls -l config.txt
+```
+
 ## 1. View permissions (ls -l)
 
 ```bash
@@ -35,6 +57,15 @@ You should see `x` in the user column (e.g. `-rwxr--r--`). Then run:
 ```
 
 **Numeric mode** (optional): `chmod 755 hello.sh` gives owner rwx, group and others r-x.
+
+**Quick reference** (numeric):
+
+| Mode | Meaning        | Typical use           |
+|------|----------------|------------------------|
+| 644  | rw-r--r--      | Data files (read-only for others) |
+| 755  | rwxr-xr-x      | Scripts others may run |
+| 600  | rw-------      | Private (only you read/write)      |
+| u+x  | add execute for user | Make script runnable: `chmod u+x script.sh` |
 
 ## 3. Why ./ is needed
 

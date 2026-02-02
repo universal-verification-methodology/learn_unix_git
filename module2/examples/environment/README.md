@@ -2,6 +2,30 @@
 
 Practice **inspecting** environment variables and **finding** which command the shell runs (`PATH`, `which`, `env`).
 
+## Layout
+
+```
+environment/
+├── README.md            # this file
+├── inspect_env.sh       # runnable script — chmod u+x then ./inspect_env.sh
+└── commands_to_try.txt # copy-paste commands
+```
+
+## Try these (from repo root)
+
+```bash
+cd module2/examples/environment
+# Copy-paste from commands_to_try.txt, or run the script:
+chmod u+x inspect_env.sh
+./inspect_env.sh
+echo $PATH
+which bash
+which git
+env | head -10
+```
+
+See `commands_to_try.txt` for a full list of commands to try.
+
 ## 1. Key variables
 
 ```bash

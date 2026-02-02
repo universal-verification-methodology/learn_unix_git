@@ -12,6 +12,18 @@
 
 ---
 
+## Running Module 3
+
+From the repo root:
+
+- **Self-check**: `./scripts/module3.sh --check`
+- **Demo commands**: `./scripts/module3.sh --demo`
+- **Exercise scaffold**: `./scripts/module3.sh --scaffold` (copies `sample.log` to `~/unix_practice/` for grep practice)
+
+See [module3/README.md](../module3/README.md) for examples and quick start.
+
+---
+
 ## Overview
 
 This module teaches how Unix runs programs (processes), how to stop them, and how to connect commands together using pipes and redirection. These skills are critical when working with simulators, build tools, and large log files in digital design workflows.

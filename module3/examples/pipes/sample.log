@@ -1,0 +1,15 @@
+[INFO] Module 3 pipes example — sample log for grep practice
+[INFO] Start simulation at 2024-02-03 10:00:00
+[INFO] Loading design from src/top.v
+[WARNING] Unused signal 'debug_q' in block top
+[INFO] Compilation complete
+[INFO] Running testbench
+[ERROR] Assertion failed at line 42: expected 0x0, got 0x1
+[WARNING] Timeout threshold approaching
+[INFO] Test run 1 finished
+[ERROR] Mismatch in output file
+[INFO] Dumping waveform to build/wave.vcd
+[WARNING] Clock period may be too short for timing
+[INFO] Simulation complete
+[ERROR] 2 tests failed, 1 passed
+[INFO] End of log

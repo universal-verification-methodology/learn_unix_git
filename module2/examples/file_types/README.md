@@ -4,11 +4,28 @@ Practice reading **ls -l** output and working with **regular files**, **director
 
 ## Layout
 
-This folder contains:
+```
+file_types/
+├── README.md       # this file
+├── sample.txt      # regular file (-)
+├── subdir/         # directory (d)
+├── my_symlink      # symlink (l) → sample.txt
+└── broken_link    # broken symlink (l) → missing target
+```
 
-- **Regular file**: `sample.txt`
-- **Directory**: `subdir/`
-- **Symbolic link**: `my_symlink` → points to `sample.txt`
+## Try these (from repo root)
+
+```bash
+cd module2/examples/file_types
+ls -l
+ls -l my_symlink
+readlink my_symlink
+cat my_symlink
+readlink broken_link
+ls -l broken_link
+```
+
+Optional: create a symlink with `ln -s sample.txt my_copy_link`, then `rm my_copy_link`. See below for details.
 
 ## 1. Long listing (ls -l)
 
@@ -38,6 +55,8 @@ readlink my_symlink
 ```
 
 `readlink` prints the target path. Reading `my_symlink` shows the content of `sample.txt` because the link points to it.
+
+**Broken symlink**: `broken_link` points to a target that does not exist. `readlink broken_link` still shows the target path; `cat broken_link` fails. `ls -l` shows the link with a broken target (often highlighted in red).
 
 ## 3. Create your own symlink (optional)
 

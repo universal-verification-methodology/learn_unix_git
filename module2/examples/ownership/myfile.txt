@@ -1,0 +1,3 @@
+Sample file for Module 2 ownership example.
+Run: ls -l myfile.txt
+The 3rd column is the owner, the 4th is the group.

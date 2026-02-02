@@ -1,0 +1,2 @@
+# Sample config file for Module 2 permissions example
+# Practice chmod: try chmod 644 config.txt (read-only for others) or chmod 600 (only you).

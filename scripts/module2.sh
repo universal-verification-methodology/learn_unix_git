@@ -117,6 +117,20 @@ run_check() {
     ((failed++)) || true
   fi
 
+  if [[ -f "$MODULE2_DIR/examples/environment/inspect_env.sh" ]]; then
+    print_ok "environment/inspect_env.sh exists"
+  else
+    print_fail "environment/inspect_env.sh missing"
+    ((failed++)) || true
+  fi
+
+  if [[ -x "$MODULE2_DIR/examples/path_and_script/local_cmd.sh" ]]; then
+    print_ok "path_and_script/local_cmd.sh exists and is executable"
+  else
+    print_fail "path_and_script/local_cmd.sh missing or not executable"
+    ((failed++)) || true
+  fi
+
   echo ""
   if [[ $failed -eq 0 ]]; then
     print_ok "All required checks passed."
@@ -128,28 +142,40 @@ run_check() {
 
 run_demo() {
   print_header "Module 2: Demo commands (copy-paste to try)"
-  echo "File types (ls -l, symlinks):"
+  echo "File types (ls -l, symlinks, broken link):"
   echo "  cd $MODULE2_DIR/examples/file_types"
   echo "  ls -l"
   echo "  readlink my_symlink"
+  echo "  readlink broken_link"
   echo ""
-  echo "Permissions (chmod, executable script):"
+  echo "Permissions (chmod, hello.sh, config.txt):"
   echo "  cd $MODULE2_DIR/examples/permissions"
-  echo "  ls -l hello.sh"
+  echo "  ls -l hello.sh config.txt"
   echo "  chmod u+x hello.sh"
   echo "  ./hello.sh"
   echo ""
-  echo "Environment (PATH, which, env):"
+  echo "Ownership (owner/group in ls -l):"
+  echo "  cd $MODULE2_DIR/examples/ownership"
+  echo "  ls -l"
+  echo "  chmod u+x explain_ls.sh && ./explain_ls.sh"
+  echo ""
+  echo "Environment (PATH, which, inspect_env.sh):"
+  echo "  cd $MODULE2_DIR/examples/environment"
+  echo "  chmod u+x inspect_env.sh && ./inspect_env.sh"
   echo "  echo \$PATH"
   echo "  which bash"
   echo "  which git"
-  echo "  env | head -10"
+  echo ""
+  echo "PATH and scripts (why ./ is needed):"
+  echo "  cd $MODULE2_DIR/examples/path_and_script"
+  echo "  ./local_cmd.sh"
+  echo "  local_cmd.sh   # expect 'command not found'"
   echo ""
   echo "Hidden files / dotfiles:"
   echo "  cd $MODULE2_DIR/examples/dotfiles"
   echo "  ls"
   echo "  ls -a"
-  echo "  ls -a ~ | head -15"
+  echo "  cat .sample_rc"
   echo ""
   print_info "All examples: $MODULE2_DIR/examples/README.md"
   print_info "Full module doc: $DOCS_DIR/MODULE2.md"
