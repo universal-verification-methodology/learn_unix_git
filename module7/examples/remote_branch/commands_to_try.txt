@@ -1,0 +1,9 @@
+# Remote branches — try in a cloned repo
+git branch -a
+git branch -r
+git remote show origin
+git checkout -b local-feature origin/feature
+git branch -u origin/main
+git fetch origin
+git branch -vv
+git remote prune origin

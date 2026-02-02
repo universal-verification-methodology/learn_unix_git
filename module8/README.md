@@ -4,7 +4,7 @@
 
 ## Overview
 
-This final module connects all previous Unix and Git topics into one workflow: clone a template, run scripts, inspect logs, develop with small commits, and submit via GitHub. Work through the examples in `examples/`, then complete the exercises in `exercises/`.
+This final module connects all previous Unix and Git topics into one workflow: clone a template, run scripts, inspect logs, develop with small commits, and submit via GitHub. Work through the examples in `examples/`, then complete the exercises in [CHECKLIST.md](CHECKLIST.md).
 
 - **Full module doc**: [docs/MODULE8.md](../docs/MODULE8.md)
 - **Run Module 8 demo/check**: From repo root, run `./scripts/module8.sh`
@@ -14,6 +14,8 @@ This final module connects all previous Unix and Git topics into one workflow: c
 ```
 module8/
 ├── README.md           # This file
+├── CHECKLIST.md        # Exercise checklist (check off as you go)
+├── EXAMPLES.md         # Index of hands-on examples with "Try these"
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
 │   ├── template/       # clone, inspect layout
@@ -21,9 +23,11 @@ module8/
 │   ├── logs/           # log dirs, tail/grep, clean
 │   ├── iterative/      # small commits, edit-run-commit loop
 │   ├── submission/     # pre-submission checks, push
-│   └── end_to_end/     # full scenario walkthrough
-└── exercises/          # Exercise instructions and optional scaffold
-    └── README.md       # Exercise checklist and setup
+│   ├── end_to_end/     # full scenario walkthrough
+│   ├── makefile_basics/   # Makefile build, run, clean
+│   ├── pre_push_checks/   # check_ready.sh, pre-push checklist
+│   ├── dry_run/        # dry-run scripts, remove_old.sh
+│   └── env_file/       # .env, source, use_env.sh
 ```
 
 ## Quick Start
@@ -44,9 +48,9 @@ module8/
    grep -i error logs/run.log
    ```
 
-3. **More examples**: See `module8/examples/README.md` for iterative development, submission, and end-to-end flow.
+3. **More examples**: See [EXAMPLES.md](EXAMPLES.md) for the full index; see `examples/README.md` for iterative development, submission, and end-to-end flow.
 
-4. **Exercises**: See [module8/exercises/README.md](exercises/README.md) and [docs/MODULE8.md](../docs/MODULE8.md#exercises).
+4. **Exercises**: See [CHECKLIST.md](CHECKLIST.md) and [docs/MODULE8.md#exercises](../docs/MODULE8.md#exercises).
 
 ## Next Steps
 

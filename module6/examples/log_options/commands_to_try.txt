@@ -1,0 +1,10 @@
+# git log options — try in a Git repo
+git log
+git log --oneline
+git log --oneline -5
+git log --oneline --graph --all
+git log -p -1
+git log --name-only -3
+git log --oneline --since="1 week ago"
+git log --oneline -- notes.md
+git show

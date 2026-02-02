@@ -4,7 +4,7 @@
 
 ## Overview
 
-This module focuses on getting comfortable and efficient in the shell and on writing small, safe scripts. Work through the examples in `examples/`, then complete the exercises in `exercises/`.
+This module focuses on getting comfortable and efficient in the shell and on writing small, safe scripts. Work through the examples in `examples/`, then complete the exercises in [CHECKLIST.md](CHECKLIST.md).
 
 - **Full module doc**: [docs/MODULE4.md](../docs/MODULE4.md)
 - **Run Module 4 demo/check**: From repo root, run `./scripts/module4.sh`
@@ -14,6 +14,8 @@ This module focuses on getting comfortable and efficient in the shell and on wri
 ```
 module4/
 ├── README.md           # This file
+├── CHECKLIST.md        # Exercise checklist (check off as you go)
+├── EXAMPLES.md         # Index of hands-on examples with "Try these"
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
 │   ├── history/        # history, shortcuts, Ctrl+R
@@ -21,9 +23,11 @@ module4/
 │   ├── script_basics/  # shebang, say_hello.sh
 │   ├── arguments/      # $1, greet.sh, default
 │   ├── control_flow/   # if, for, count_lines.sh
-│   └── safe_scripting/ # set -e, quoting, dry run (clean_tmp.sh)
-└── exercises/          # Exercise instructions and optional scaffold
-    └── README.md       # Exercise checklist and setup
+│   ├── safe_scripting/ # set -e, quoting, dry run (clean_tmp.sh)
+│   ├── functions/      # shell functions vs scripts
+│   ├── read_input/     # read -p, prompt_name.sh, confirm.sh
+│   ├── exit_codes/     # exit, $?, success/failure scripts
+│   └── case_statement/ # case ... esac, greet.sh
 ```
 
 ## Quick Start
@@ -59,9 +63,9 @@ module4/
    ./clean_tmp.sh --confirm
    ```
 
-6. **More examples**: See `module4/examples/README.md` for history, aliases, and full command lists.
+6. **More examples**: See [EXAMPLES.md](EXAMPLES.md) for the full index; see `examples/README.md` for history, aliases, and full command lists.
 
-7. **Exercises**: See [module4/exercises/README.md](exercises/README.md) and [docs/MODULE4.md](../docs/MODULE4.md#exercises).
+7. **Exercises**: See [CHECKLIST.md](CHECKLIST.md) and [docs/MODULE4.md#exercises](../docs/MODULE4.md#exercises).
 
 ## Next Steps
 

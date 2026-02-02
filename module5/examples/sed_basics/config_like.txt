@@ -1,0 +1,4 @@
+# sample config
+KEY=value
+PORT=8080
+DEBUG=0

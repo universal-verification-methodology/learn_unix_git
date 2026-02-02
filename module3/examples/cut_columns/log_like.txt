@@ -1,0 +1,4 @@
+[INFO] start simulation
+[WARNING] timeout near
+[ERROR] assertion failed
+[INFO] end

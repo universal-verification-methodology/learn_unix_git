@@ -172,3 +172,52 @@ ls files/ | xargs ./echo_demo.sh
 ```
 
 See `xargs/README.md` for -I {} and -print0/-0 for filenames with spaces.
+
+---
+
+## 9. cut (columns) (`cut_columns/`)
+
+Practice **extracting columns** with `cut` by delimiter or character position.
+
+**Layout**: `csv_like.txt`, `log_like.txt`, `fixed.txt`.
+
+**Try these**:
+
+```bash
+cd module3/examples/cut_columns
+cut -d',' -f1 csv_like.txt
+cut -d',' -f1,3 csv_like.txt
+cut -d' ' -f2 log_like.txt
+cut -c1-5 fixed.txt
+```
+
+See `cut_columns/README.md` for -d, -f, -c and pipes.
+
+---
+
+## 10. Here document (`here_doc/`)
+
+Practice **here documents** (`<<EOF` … `EOF`) to feed multi-line input to a command.
+
+**Layout**: `read_stdin.sh` (chmod u+x).
+
+**Try these**:
+
+```bash
+cd module3/examples/here_doc
+./read_stdin.sh <<EOF
+line one
+line two
+EOF
+cat <<EOF
+Hello
+Multi-line
+EOF
+grep "two" <<EOF
+one
+two
+three
+EOF
+```
+
+See `here_doc/README.md` for quoting the delimiter and use in scripts.

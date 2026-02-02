@@ -4,7 +4,7 @@
 
 ## Overview
 
-This module covers practical skills for managing source code and project files: using editors, structuring projects, and using archives to move or back up work. Work through the examples in `examples/`, then complete the exercises in `exercises/`.
+This module covers practical skills for managing source code and project files: using editors, structuring projects, and using archives to move or back up work. Work through the examples in `examples/`, then complete the exercises in [CHECKLIST.md](CHECKLIST.md).
 
 - **Full module doc**: [docs/MODULE5.md](../docs/MODULE5.md)
 - **Run Module 5 demo/check**: From repo root, run `./scripts/module5.sh`
@@ -14,6 +14,8 @@ This module covers practical skills for managing source code and project files: 
 ```
 module5/
 ├── README.md           # This file
+├── CHECKLIST.md        # Exercise checklist (check off as you go)
+├── EXAMPLES.md         # Index of hands-on examples with "Try these"
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
 │   ├── editor/         # open from terminal, nano/code
@@ -21,9 +23,11 @@ module5/
 │   ├── find_grep/      # find -name, grep -R
 │   ├── tar_archives/   # tar czf, tar xzf
 │   ├── zip_archives/   # zip -r, unzip
-│   └── backup/         # timestamped archive, what to exclude
-└── exercises/          # Exercise instructions and optional scaffold
-    └── README.md       # Exercise checklist and setup
+│   ├── backup/         # timestamped archive, what to exclude
+│   ├── diff_patch/     # diff -u, patch
+│   ├── clean_build/    # clean script, list-before-delete
+│   ├── sed_basics/     # sed -e, substitution, config-like files
+│   └── link_relative/  # relative symlinks for portability
 ```
 
 ## Quick Start
@@ -61,9 +65,9 @@ module5/
    unzip -l demo.zip
    ```
 
-6. **More examples**: See `module5/examples/README.md` for editor and backup.
+6. **More examples**: See [EXAMPLES.md](EXAMPLES.md) for the full index; see `examples/README.md` for editor and backup.
 
-7. **Exercises**: See [module5/exercises/README.md](exercises/README.md) and [docs/MODULE5.md](../docs/MODULE5.md#exercises).
+7. **Exercises**: See [CHECKLIST.md](CHECKLIST.md) and [docs/MODULE5.md#exercises](../docs/MODULE5.md#exercises).
 
 ## Next Steps
 

@@ -162,3 +162,42 @@ cd ..
 ```
 
 See `clean_build/README.md` for list-before-delete and .gitignore.
+
+---
+
+## 9. sed basics (`sed_basics/`)
+
+Practice **simple substitution** and line operations with `sed`.
+
+**Layout**: `sample.txt`, `config_like.txt`.
+
+**Try these** (from repo root):
+
+```bash
+cd module5/examples/sed_basics
+sed 's/old/new/' sample.txt
+sed 's/old/new/g' sample.txt
+sed -n '2p' sample.txt
+sed '2d' sample.txt
+```
+
+See `sed_basics/README.md` for s///g and -i (in-place).
+
+---
+
+## 10. Relative symlinks (`link_relative/`)
+
+Practice **relative symlinks** with `ln -s` so links work when the project is moved.
+
+**Layout**: `project/` (src/, external/), `shared/lib.v`. Create link: `cd project && ln -s ../../shared/lib.v external/lib.v`.
+
+**Try these**:
+
+```bash
+cd module5/examples/link_relative/project
+ln -s ../../shared/lib.v external/lib.v
+ls -la external/
+readlink external/lib.v
+```
+
+See `link_relative/README.md` for relative vs absolute and project layout.

@@ -157,3 +157,43 @@ chmod u+x prompt_name.sh confirm.sh
 ```
 
 See `read_input/README.md` for read -p, -r, and y/n confirmation patterns.
+
+---
+
+## 9. Exit codes (`exit_codes/`)
+
+Practice **returning** and **checking** exit codes with `exit 0`, `exit 1`, and `$?`.
+
+**Layout**: `success.sh`, `failure.sh`, `check_file.sh` (chmod u+x).
+
+**Try these**:
+
+```bash
+cd module4/examples/exit_codes
+./success.sh; echo $?
+./failure.sh; echo $?
+./check_file.sh README.md; echo $?
+./check_file.sh missing.txt; echo $?
+if ./success.sh; then echo "OK"; fi
+```
+
+See `exit_codes/README.md` for $? and set -e.
+
+---
+
+## 10. case statement (`case_statement/`)
+
+Practice **multi-way branching** with `case $var in ... esac`.
+
+**Layout**: `greet.sh` (chmod u+x), `commands_to_try.txt`.
+
+**Try these**:
+
+```bash
+cd module4/examples/case_statement
+./greet.sh hello
+./greet.sh bye
+./greet.sh other
+```
+
+See `case_statement/README.md` for patterns and when to use case.

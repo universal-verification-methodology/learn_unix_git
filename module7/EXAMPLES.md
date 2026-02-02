@@ -58,9 +58,9 @@ Practice **recognizing** conflict markers and **resolving** conflicts.
 
 Practice **adding** and **updating** submodules for shared IP or libraries.
 
-**Layout**: README + `commands_to_try.txt`.
+**Layout**: README, `commands_to_try.txt`, and **demo submodule** `demo_repo/` (GitHub octocat/Hello-World). This repo has a real submodule so you can practice init/update after clone.
 
-**Try these** (with a real small repo URL): `git submodule add <url> external/example`, commit; clone elsewhere and run `git submodule update --init --recursive`. See `submodules/README.md` for pitfalls and updating the parent repo.
+**Try these** (after cloning learn_unix_git): run `git submodule update --init --recursive` or `./scripts/git-submodule-init.sh` to populate `demo_repo/`; then `ls demo_repo`, `cat demo_repo/README`. See `submodules/README.md` for adding your own submodule and pitfalls.
 
 ---
 
@@ -126,3 +126,43 @@ git cherry-pick <commit-hash>
 ```
 
 See `cherry_pick/README.md` for conflicts and cherry-pick -n (no commit).
+
+---
+
+## 9. Reflog (`reflog/`)
+
+Practice **inspecting and recovering** recent history with `git reflog`.
+
+**Layout**: `commands_to_try.txt`.
+
+**Try these** (in a repo after checkouts, commits, or resets):
+
+```bash
+git reflog
+git reflog -10
+git reset --hard HEAD~1
+git reflog
+git reset --hard HEAD@{1}
+```
+
+See `reflog/README.md` for recovery after a bad reset.
+
+---
+
+## 10. Remote branches (`remote_branch/`)
+
+Practice **listing** remote branches, **tracking**, and **pruning** stale refs.
+
+**Layout**: `commands_to_try.txt`.
+
+**Try these** (in a cloned repo):
+
+```bash
+git branch -a
+git branch -r
+git branch -vv
+git fetch origin
+git remote prune origin
+```
+
+See `remote_branch/README.md` for upstream and tracking.

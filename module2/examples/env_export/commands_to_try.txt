@@ -1,0 +1,9 @@
+# Environment and export — try in your shell
+MY_VAR=hello
+echo $MY_VAR
+bash -c 'echo $MY_VAR'
+export MY_VAR
+bash -c 'echo $MY_VAR'
+./show_var.sh
+MY_VAR=overridden ./show_var.sh
+unset MY_VAR

@@ -2,7 +2,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-Unix, Git, and tooling basics for students taking digital design and verification courses. This project provides a complete educational path from shell fundamentals through Git collaboration and end-to-end project workflow. Each module doc includes topics, exercises, assessment, and a **Command Reference (Detailed)** with descriptions of every command: what it does, how it works, common options, and usage examples.
+Unix, Git, and tooling basics for students taking digital design and verification courses. This project provides a complete educational path from shell fundamentals through Git collaboration and end-to-end project workflow. Each **module** has **CHECKLIST.md** (exercise checklist), **EXAMPLES.md** (index of hands-on examples with "Try these"), and **README.md** (quick start). Each **module doc** in `docs/` includes topics, exercises, assessment, and a **Command Reference (Detailed)** with descriptions of every command: what it does, how it works, common options, and usage examples.
 
 ## 📋 Table of Contents
 
@@ -47,10 +47,11 @@ This project is a complete educational resource for learning Unix and Git in the
 ## ✨ Features
 
 - ✅ **8 Modules**: Complete path from shell basics to end-to-end workflow
-- ✅ **Command Reference (Detailed)**: Every command documented with what/how/syntax/options/examples/tips
+- ✅ **Per-module layout**: CHECKLIST.md (exercises), EXAMPLES.md (example index with "Try these"), README.md (quick start)
+- ✅ **Command Reference (Detailed)**: Every command documented in each module doc (what/how/syntax/options/examples/tips)
 - ✅ **Practical Examples**: Navigation, files, permissions, pipes, scripts, archives, Git, submodules
 - ✅ **Scripts per Module**: `--check`, `--demo`, `--scaffold` (where applicable)
-- ✅ **Exercises & Assessment**: Hands-on tasks and checklists for each module
+- ✅ **Exercises & Assessment**: Hands-on tasks and CHECKLIST.md for each module
 - ✅ **GitHub-Oriented**: Clone, commit, push, pull, branches, merge, PRs
 - ✅ **Digital Design Context**: Project layout (src/, tb/, build/), logs, and submission flow
 - ✅ **Safe Practices**: Quoting, .gitignore, restore, clean rebuild, pre-submission checks
@@ -112,37 +113,20 @@ learn_unix_git/
 │   └── MODULE8.md             # End-to-End Project Workflow
 │
 ├── module1/                   # Shell basics (navigation, files, viewing, help)
+│   ├── CHECKLIST.md           # Exercise checklist (check off as you go)
+│   ├── EXAMPLES.md            # Index of examples with "Try these"
+│   ├── README.md              # Quick start and directory layout
 │   ├── examples/              # navigation, paths, file_operations, viewing, etc.
-│   ├── README.md
 │   └── ...
-├── module2/                   # Permissions, environment, dotfiles
-│   ├── examples/              # permissions, environment, file_types, ownership, etc.
-│   ├── README.md
-│   └── ...
-├── module3/                   # Processes, pipes, redirection, grep
-│   ├── examples/              # processes, pipes, redirection, troubleshooting, etc.
-│   └── README.md
-├── module4/                   # History, aliases, scripts, variables, control flow
-│   ├── examples/              # script_basics, arguments, control_flow, safe_scripting, etc.
-│   └── README.md
-├── module5/                   # Editors, find, grep -R, tar, zip
-│   ├── examples/              # editor, find_grep, tar_archives, zip_archives, etc.
-│   └── README.md
-├── module6/                   # Git basics (init, clone, add, commit, push, .gitignore)
-│   ├── examples/              # init_clone, status_diff, add_commit_log, remote_undo, etc.
-│   └── README.md
-├── module7/                   # Branches, merge, conflicts, submodules, blame, bisect, PRs
-│   ├── examples/              # branching, merging, conflicts, submodules, blame_bisect, etc.
-│   └── README.md
-├── module8/                   # End-to-end workflow (template, scripts, logs, submission)
-│   ├── examples/              # template, scripts, logs, iterative, submission
-│   └── README.md
+├── module2/ … module8/        # Same layout: CHECKLIST.md, EXAMPLES.md, README.md, examples/
 │
-├── scripts/                   # Per-module scripts
-│   ├── module1.sh             # --check, --demo, --scaffold
-│   ├── module2.sh             # --check, --demo, --scaffold
-│   ├── ...                    # module3–8
-│   └── module8.sh
+├── scripts/                   # Per-module scripts + Git helpers
+│   ├── module1.sh … module8.sh   # --check, --demo, --scaffold
+│   ├── git-submodule-init.sh     # init/update submodules (after clone)
+│   ├── git-submodule-add.sh      # add submodule (url [path])
+│   ├── git-submodule-status.sh   # status of all submodules
+│   ├── git-clone-with-submodules.sh  # clone + submodule update --init --recursive
+│   └── README.md                  # script usage
 │
 └── README.md                  # This file
 ```
@@ -247,10 +231,22 @@ Each module has a script under `scripts/`:
 
 Run from the **repository root**. Not all modules have `--scaffold`; see the module doc or script help.
 
+### Git scripts (submodules)
+
+Helper scripts for Git submodules (see [scripts/README.md](scripts/README.md)):
+
+```bash
+./scripts/git-submodule-init.sh              # init/update submodules after clone
+./scripts/git-submodule-init.sh --check      # list submodules only
+./scripts/git-submodule-add.sh <url> [path]  # add a submodule
+./scripts/git-submodule-status.sh           # status of all submodules
+./scripts/git-clone-with-submodules.sh <url> [dir]  # clone + init submodules
+```
+
 ### Module Content and Examples
 
-- **Module docs**: [docs/MODULE1.md](docs/MODULE1.md) … [docs/MODULE8.md](docs/MODULE8.md) — full syllabus and **Command Reference (Detailed)**.
-- **Examples**: [module1/README.md](module1/README.md) … [module8/README.md](module8/README.md) — quick start and example index for each module.
+- **Module docs** (syllabus + command reference): [docs/MODULE1.md](docs/MODULE1.md) … [docs/MODULE8.md](docs/MODULE8.md).
+- **Per module**: Each has **README.md** (quick start), **EXAMPLES.md** (index of examples with "Try these"), and **CHECKLIST.md** (exercise checklist). Example: [module1/README.md](module1/README.md), [module1/EXAMPLES.md](module1/EXAMPLES.md), [module1/CHECKLIST.md](module1/CHECKLIST.md).
 
 ### Command Reference
 
@@ -281,7 +277,7 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 For questions or issues:
 
 1. Check the [documentation](docs/) and the **Command Reference (Detailed)** in each module doc.
-2. Review the [module READMEs](module1/README.md) for examples and quick start.
+2. Review each module’s [README.md](module1/README.md), [EXAMPLES.md](module1/EXAMPLES.md), and [CHECKLIST.md](module1/CHECKLIST.md) for quick start, example index, and exercises.
 3. Run `./scripts/moduleN.sh --check` and `--demo` for the relevant module.
 4. Open an issue for bugs or suggestions.
 

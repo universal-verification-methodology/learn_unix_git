@@ -4,7 +4,7 @@
 
 ## Overview
 
-This module introduces Git as a local version control system and shows how to use it with GitHub for typical course workflows. Work through the examples in `examples/`, then complete the exercises in `exercises/`.
+This module introduces Git as a local version control system and shows how to use it with GitHub for typical course workflows. Work through the examples in `examples/`, then complete the exercises in [CHECKLIST.md](CHECKLIST.md).
 
 - **Full module doc**: [docs/MODULE6.md](../docs/MODULE6.md)
 - **Run Module 6 demo/check**: From repo root, run `./scripts/module6.sh`
@@ -14,6 +14,8 @@ This module introduces Git as a local version control system and shows how to us
 ```
 module6/
 ├── README.md           # This file
+├── CHECKLIST.md        # Exercise checklist (check off as you go)
+├── EXAMPLES.md         # Index of hands-on examples with "Try these"
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
 │   ├── concepts/       # repo, working tree, staging area, commit
@@ -21,9 +23,11 @@ module6/
 │   ├── status_diff/    # git status, git diff
 │   ├── add_commit_log/ # git add, git commit, git log
 │   ├── gitignore/      # .gitignore for build/, *.log
-│   └── remote_undo/   # remote -v, pull, push; git restore
-└── exercises/          # Exercise instructions and optional scaffold
-    └── README.md       # Exercise checklist and setup
+│   ├── remote_undo/    # remote -v, pull, push; git restore
+│   ├── tags/           # git tag
+│   ├── stash/          # git stash
+│   ├── branch_rename/  # git branch -m, -d, -D
+│   └── log_options/    # git log --oneline, --graph, -p, filtering
 ```
 
 ## Quick Start
@@ -51,9 +55,9 @@ module6/
 
 4. **Try .gitignore** (see `module6/examples/gitignore/` for sample file and README).
 
-5. **More examples**: See `module6/examples/README.md` for concepts, init/clone, add/commit/log, remote, and undo.
+5. **More examples**: See [EXAMPLES.md](EXAMPLES.md) for the full index; see `examples/README.md` for the same list with more detail.
 
-6. **Exercises**: See [module6/exercises/README.md](exercises/README.md) and [docs/MODULE6.md](../docs/MODULE6.md#exercises).
+6. **Exercises**: See [CHECKLIST.md](CHECKLIST.md) and [docs/MODULE6.md#exercises](../docs/MODULE6.md#exercises).
 
 ## Next Steps
 

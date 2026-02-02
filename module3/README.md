@@ -4,7 +4,7 @@
 
 ## Overview
 
-This module teaches how Unix runs programs (processes), how to stop them, and how to connect commands with pipes and redirection. Work through the examples in `examples/`, then complete the exercises in `exercises/`.
+This module teaches how Unix runs programs (processes), how to stop them, and how to connect commands with pipes and redirection. Work through the examples in `examples/`, then complete the exercises in [CHECKLIST.md](CHECKLIST.md).
 
 - **Full module doc**: [docs/MODULE3.md](../docs/MODULE3.md)
 - **Run Module 3 demo/check**: From repo root, run `./scripts/module3.sh`
@@ -14,6 +14,8 @@ This module teaches how Unix runs programs (processes), how to stop them, and ho
 ```
 module3/
 ├── README.md           # This file
+├── CHECKLIST.md        # Exercise checklist (check off as you go)
+├── EXAMPLES.md         # Index of hands-on examples with "Try these"
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
 │   ├── processes/     # ps, PID, exit status, Ctrl+C
@@ -21,9 +23,11 @@ module3/
 │   ├── pipes/         # |, grep, grep -i, sample log
 │   ├── background/    # &, jobs, tail -f
 │   ├── troubleshooting/   # tee, 2>&1, failing command
-│   └── combining/     # 2>&1 | tee | grep, pipeline chains
-└── exercises/          # Exercise instructions and optional scaffold
-    └── README.md       # Exercise checklist and setup
+│   ├── combining/     # 2>&1 | tee | grep, pipeline chains
+│   ├── sort_uniq/     # sort, uniq, wc -l
+│   ├── xargs/         # xargs from find/grep -l
+│   ├── cut_columns/   # cut -d, -f, -c
+│   └── here_doc/      # <<EOF here documents
 ```
 
 ## Quick Start
@@ -64,9 +68,9 @@ module3/
    cat run.log
    ```
 
-6. **More examples**: See `module3/examples/README.md` for background jobs and full command lists.
+6. **More examples**: See [EXAMPLES.md](EXAMPLES.md) for the full index; see `examples/README.md` for background jobs and full command lists.
 
-7. **Exercises**: See [module3/exercises/README.md](exercises/README.md) and [docs/MODULE3.md](../docs/MODULE3.md#exercises).
+7. **Exercises**: See [CHECKLIST.md](CHECKLIST.md) and [docs/MODULE3.md#exercises](../docs/MODULE3.md#exercises).
 
 ## Next Steps
 

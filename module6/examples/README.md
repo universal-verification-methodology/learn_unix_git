@@ -152,3 +152,41 @@ git stash pop
 ```
 
 See `stash/README.md` for stash apply vs pop and stash -u (untracked).
+
+---
+
+## 9. log options (`log_options/`)
+
+Practice **viewing history** with `git log --oneline`, `--graph`, `-p`, `--name-only`, and filtering.
+
+**Layout**: `commands_to_try.txt`.
+
+**Try these** (in a Git repo):
+
+```bash
+git log --oneline -5
+git log --oneline --graph --all
+git log -p -1
+git log --name-only -3
+git log --oneline -- notes.md
+```
+
+See `log_options/README.md` for --since, --author, and path filter.
+
+---
+
+## 10. Branch rename and delete (`branch_rename/`)
+
+Practice **renaming** branches with `git branch -m` and **deleting** with `-d` / `-D`.
+
+**Layout**: `commands_to_try.txt`.
+
+**Try these** (in a repo with a branch):
+
+```bash
+git branch -m feature/old-name feature/new-name
+git checkout main
+git branch -d feature/new-name
+```
+
+See `branch_rename/README.md` for push after rename and remote delete.

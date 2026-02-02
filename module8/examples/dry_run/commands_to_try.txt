@@ -1,0 +1,4 @@
+# Dry run — try in module8/examples/dry_run
+./remove_old.sh --help
+./remove_old.sh --dry-run
+./remove_old.sh

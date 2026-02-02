@@ -149,3 +149,41 @@ chmod u+x check_ready.sh
 ```
 
 See `pre_push_checks/README.md` for manual checklist and optional pre-push hook.
+
+---
+
+## 9. Dry run (`dry_run/`)
+
+Practice **scripts that support --dry-run** (show what would be done without doing it).
+
+**Layout**: `remove_old.sh` (chmod u+x), `commands_to_try.txt`.
+
+**Try these** (from repo root):
+
+```bash
+cd module8/examples/dry_run
+chmod u+x remove_old.sh
+./remove_old.sh --help
+./remove_old.sh --dry-run
+```
+
+See `dry_run/README.md` for implementing --dry-run in scripts.
+
+---
+
+## 10. Environment file (`env_file/`)
+
+Practice **loading variables** from a file with `source` or `. file`.
+
+**Layout**: `sample.env`, `use_env.sh` (chmod u+x), `commands_to_try.txt`.
+
+**Try these**:
+
+```bash
+cd module8/examples/env_file
+source sample.env
+echo $MY_VAR
+./use_env.sh
+```
+
+See `env_file/README.md` for sourcing in scripts and export from file.

@@ -1,0 +1,3 @@
+medium file
+with a few lines
+for ls -l size demo

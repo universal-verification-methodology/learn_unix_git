@@ -1,0 +1,9 @@
+# Branch rename and delete — try in a Git repo with a branch
+git branch
+git branch -m feature/old-name feature/new-name
+git branch -m new-name
+git checkout main
+git branch -d feature/new-name
+git branch -D feature/new-name
+git push origin feature/new-name
+git push origin --delete feature/old-name

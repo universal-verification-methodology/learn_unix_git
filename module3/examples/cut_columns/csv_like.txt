@@ -1,0 +1,4 @@
+name,count,date
+alice,10,2024-01-01
+bob,20,2024-01-02
+charlie,15,2024-01-03

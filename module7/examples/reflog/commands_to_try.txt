@@ -1,0 +1,7 @@
+# git reflog — try in a Git repo after checkouts/commits/resets
+git reflog
+git reflog -10
+git reflog show main
+git reset --hard HEAD~1
+git reflog
+git reset --hard HEAD@{1}

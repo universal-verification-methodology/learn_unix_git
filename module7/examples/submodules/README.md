@@ -7,8 +7,19 @@ Practice **adding** and **updating** Git submodules for shared IP or libraries.
 ```
 submodules/
 ├── README.md           # this file
-└── commands_to_try.txt # copy-paste commands
+├── commands_to_try.txt # copy-paste commands
+└── demo_repo/          # demo submodule (GitHub octocat/Hello-World)
 ```
+
+**This repo has a real submodule.** If you cloned learn_unix_git, run one of the following to populate `demo_repo/` (it may be empty until then):
+
+```bash
+git submodule update --init --recursive
+# or from repo root:
+./scripts/git-submodule-init.sh
+```
+
+Then inspect: `ls module7/examples/submodules/demo_repo`, `cat module7/examples/submodules/demo_repo/README`.
 
 ## 1. What are submodules?
 
@@ -72,4 +83,12 @@ The parent repo must record the new commit; otherwise others will still get the 
 - **Forgetting `git submodule update --init`** — after clone, submodule dirs are empty until you run it.
 - **Changing submodule without updating parent** — if you commit inside the submodule, also commit the parent repo so the new submodule commit is recorded.
 
-See `commands_to_try.txt` for a compact list. Use a real small repo URL when trying `git submodule add` (e.g. a small public repo or one provided by your course).
+See `commands_to_try.txt` for a compact list.
+
+## 6. Demo submodule in this repo
+
+This repository includes a **demo submodule** at `module7/examples/submodules/demo_repo` (GitHub’s [octocat/Hello-World](https://github.com/octocat/Hello-World)). Use it to practice:
+
+- **After cloning learn_unix_git:** run `git submodule update --init --recursive` or `./scripts/git-submodule-init.sh` so `demo_repo/` is populated.
+- **Check status:** `git submodule status` or `./scripts/git-submodule-status.sh`.
+- **Inspect:** `ls demo_repo`, `cat demo_repo/README`.

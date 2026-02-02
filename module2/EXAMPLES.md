@@ -175,3 +175,45 @@ groups
 ```
 
 See `groups/README.md` for how group membership affects permissions in `ls -l`.
+
+---
+
+## 9. Environment and export (`env_export/`)
+
+Practice **setting** and **exporting** variables so child processes (scripts) see them.
+
+**Layout**: `show_var.sh` (chmod u+x), `commands_to_try.txt`.
+
+**Try these**:
+
+```bash
+cd module2/examples/env_export
+MY_VAR=hello
+echo $MY_VAR
+bash -c 'echo $MY_VAR'
+export MY_VAR
+bash -c 'echo $MY_VAR'
+./show_var.sh
+MY_VAR=overridden ./show_var.sh
+```
+
+See `env_export/README.md` for set vs export and one-shot override.
+
+---
+
+## 10. realpath (`realpath/`)
+
+Practice **resolving paths** to absolute, canonical form with `realpath` and `readlink -f`.
+
+**Layout**: `a_file.txt`; create `link_to_file` with `ln -s a_file.txt link_to_file` to try symlink resolution.
+
+**Try these**:
+
+```bash
+cd module2/examples/realpath
+realpath .
+realpath a_file.txt
+readlink -f a_file.txt
+```
+
+See `realpath/README.md` for scripts and comparing paths.

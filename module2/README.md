@@ -4,7 +4,7 @@
 
 ## Overview
 
-This module explains how Unix represents files, directories, and permissions, and how the environment (variables like `PATH`) affects the tools you use. Work through the examples in `examples/`, then complete the exercises in `exercises/`.
+This module explains how Unix represents files, directories, and permissions, and how the environment (variables like `PATH`) affects the tools you use. Work through the examples in `examples/`, then complete the exercises in [CHECKLIST.md](CHECKLIST.md).
 
 - **Full module doc**: [docs/MODULE2.md](../docs/MODULE2.md)
 - **Run Module 2 demo/check**: From repo root, run `./scripts/module2.sh`
@@ -14,6 +14,8 @@ This module explains how Unix represents files, directories, and permissions, an
 ```
 module2/
 ├── README.md           # This file
+├── CHECKLIST.md        # Exercise checklist (check off as you go)
+├── EXAMPLES.md         # Index of hands-on examples with "Try these"
 ├── examples/           # Hands-on examples
 │   ├── README.md       # How to run the examples
 │   ├── file_types/     # ls -l, regular files, dirs, symlinks, broken link
@@ -21,9 +23,11 @@ module2/
 │   ├── ownership/      # Owner/group in ls -l, explain_ls.sh
 │   ├── environment/    # PATH, which, env, inspect_env.sh, commands_to_try.txt
 │   ├── path_and_script/   # Why ./script.sh is needed, local_cmd.sh
-│   └── dotfiles/       # Hidden files, ls -a, .sample_rc, .gitignore
-└── exercises/          # Exercise instructions and optional scaffold
-    └── README.md       # Exercise checklist and setup
+│   ├── dotfiles/       # Hidden files, ls -a, .sample_rc, .gitignore
+│   ├── umask/          # Default permissions, umask -S
+│   ├── groups/         # id, groups, show_id.sh
+│   ├── env_export/     # export, one-shot VAR=value, show_var.sh
+│   └── realpath/       # realpath, readlink -f
 ```
 
 ## Quick Start
@@ -66,9 +70,9 @@ module2/
    local_cmd.sh
    ```
 
-6. **More examples**: See `module2/examples/README.md` for ownership, dotfiles, and full command lists.
+6. **More examples**: See [EXAMPLES.md](EXAMPLES.md) for the full index; see `examples/README.md` for ownership, dotfiles, and full command lists.
 
-7. **Exercises**: See [module2/exercises/README.md](exercises/README.md) and [docs/MODULE2.md](../docs/MODULE2.md#exercises).
+7. **Exercises**: See [CHECKLIST.md](CHECKLIST.md) and [docs/MODULE2.md#exercises](../docs/MODULE2.md#exercises).
 
 ## Next Steps
 

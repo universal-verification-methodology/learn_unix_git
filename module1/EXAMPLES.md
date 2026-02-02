@@ -181,3 +181,45 @@ touch placeholder_{1,2,3}.tmp
 ```
 
 See `touch/README.md` for .gitkeep and brace expansion.
+
+---
+
+## 9. ls options (`ls_options/`)
+
+Practice **listing files** with `ls -l`, `-t`, `-S`, `-h`, and `-R`.
+
+**Layout**: `small.txt`, `medium.txt`, `big.txt`, `subdir/nested.txt`.
+
+**Try these**:
+
+```bash
+cd module1/examples/ls_options
+ls -l
+ls -lt
+ls -lS
+ls -lh
+ls -lR
+```
+
+See `ls_options/README.md` for option summary.
+
+---
+
+## 10. wc basics (`wc_basics/`)
+
+Practice **counting lines, words, and bytes** with `wc`.
+
+**Layout**: `poem.txt`, `list.txt`, `empty.txt`.
+
+**Try these**:
+
+```bash
+cd module1/examples/wc_basics
+wc poem.txt
+wc -l poem.txt
+wc -w poem.txt
+wc -l *.txt
+cat poem.txt | wc -l
+```
+
+See `wc_basics/README.md` for -l, -w, -c and piped use.

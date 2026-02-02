@@ -1,0 +1,5 @@
+# Environment file — try in module8/examples/env_file
+source sample.env
+echo $MY_VAR
+./use_env.sh
+export $(grep -v '^#' sample.env | xargs)
