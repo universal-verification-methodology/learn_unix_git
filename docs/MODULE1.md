@@ -12,6 +12,18 @@
 
 ---
 
+## Running Module 1
+
+From the repo root:
+
+- **Self-check**: `./scripts/module1.sh --check`
+- **Demo commands**: `./scripts/module1.sh --demo`
+- **Exercise scaffold**: `./scripts/module1.sh --scaffold` (creates `~/unix_practice/`)
+
+See [module1/README.md](../module1/README.md) for examples and quick start.
+
+---
+
 ## Overview
 
 This module introduces the Unix shell and the essential commands students need before doing any digital design or verification work. By the end of this module, students should be able to open a terminal, navigate the filesystem, inspect files, and run simple commands with confidence.

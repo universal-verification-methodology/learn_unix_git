@@ -1,0 +1,30 @@
+Line 01: This is a sample file for Module 1 viewing practice.
+Line 02: Use head, tail, and less to navigate.
+Line 03: head -n N shows the first N lines.
+Line 04: tail -n N shows the last N lines.
+Line 05: less lets you scroll and search.
+Line 06: In less: Space = next page, b = previous page.
+Line 07: In less: /word = search, n = next match, q = quit.
+Line 08: Useful for logs and source files.
+Line 09: Digital design: .v, .sv, .cpp, .md files.
+Line 10: Always know where you are: pwd and ls.
+Line 11: Relative paths: . (current), .. (parent).
+Line 12: Home directory: ~ (tilde).
+Line 13: cd with no arguments goes to home.
+Line 14: ls -l shows long listing (permissions, size, date).
+Line 15: ls -a shows hidden files (names start with .).
+Line 16: ls -la combines both.
+Line 17: mkdir creates a directory; mkdir -p creates parents.
+Line 18: cp copies files; cp -r copies directories.
+Line 19: mv moves or renames.
+Line 20: rm removes files; rm -r removes directories (careful!).
+Line 21: Avoid rm -rf unless you are sure.
+Line 22: cat prints whole file; good for small files.
+Line 23: For large files, use less instead of cat.
+Line 24: man command shows the manual (e.g. man ls).
+Line 25: command --help often shows short help.
+Line 26: Tab completion: type part of name, press Tab.
+Line 27: History: Up/Down arrows to repeat commands.
+Line 28: Practice in a safe directory first.
+Line 29: This file has enough lines for head/tail/less practice.
+Line 30: End of sample_for_viewing.txt.
