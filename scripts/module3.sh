@@ -104,6 +104,13 @@ run_check() {
     ((failed++)) || true
   fi
 
+  if [[ -f "$MODULE3_DIR/examples/combining/combine_demo.sh" ]]; then
+    print_ok "combining/combine_demo.sh exists"
+  else
+    print_fail "combining/combine_demo.sh missing"
+    ((failed++)) || true
+  fi
+
   echo ""
   if [[ $failed -eq 0 ]]; then
     print_ok "All required checks passed."
@@ -148,6 +155,12 @@ run_demo() {
   echo "  chmod u+x failing_cmd.sh"
   echo "  ./failing_cmd.sh 2>&1 | tee debug.log"
   echo "  cat debug.log"
+  echo ""
+  echo "Combining tools (2>&1 | tee | grep):"
+  echo "  cd $MODULE3_DIR/examples/combining"
+  echo "  chmod u+x combine_demo.sh"
+  echo "  ./combine_demo.sh 2>&1 | tee run.log | grep -i error"
+  echo "  cat run.log"
   echo ""
   print_info "All examples: $MODULE3_DIR/examples/README.md"
   print_info "Full module doc: $DOCS_DIR/MODULE3.md"

@@ -12,6 +12,18 @@
 
 ---
 
+## Running Module 4
+
+From the repo root:
+
+- **Self-check**: `./scripts/module4.sh --check`
+- **Demo commands**: `./scripts/module4.sh --demo`
+- **Exercise scaffold**: `./scripts/module4.sh --scaffold` (copies `say_hello.sh` and `greet.sh` to `~/unix_practice/`)
+
+See [module4/README.md](../module4/README.md) for examples and quick start.
+
+---
+
 ## Overview
 
 This module focuses on getting students comfortable and efficient in the shell, and on writing small, safe scripts to automate common tasks. The emphasis is on practical workflows that will later wrap digital design flows (e.g., compile → simulate → view results), but the scripts here remain tool-agnostic.

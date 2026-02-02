@@ -8,7 +8,8 @@ Unix, Git, and tooling basics for students taking digital design and verificatio
 - **Module 1**: [docs/MODULE1.md](docs/MODULE1.md) — Linux & Shell Basics (implemented)
 - **Module 2**: [docs/MODULE2.md](docs/MODULE2.md) — Filesystem, Permissions & Environment (implemented)
 - **Module 3**: [docs/MODULE3.md](docs/MODULE3.md) — Processes, Pipes & Redirection (implemented)
-- **Module 4–8**: See [docs/](docs/) for outlines
+- **Module 4**: [docs/MODULE4.md](docs/MODULE4.md) — Shell Productivity & Basic Scripting (implemented)
+- **Module 5–8**: See [docs/](docs/) for outlines
 
 ## Quick start
 
@@ -36,6 +37,15 @@ Unix, Git, and tooling basics for students taking digital design and verificatio
 ./scripts/module3.sh --scaffold # copy sample.log to ~/unix_practice for grep practice
 ```
 
+**Module 4** (Shell Productivity & Basic Scripting):
+
+```bash
+./scripts/module4.sh --check   # self-check
+./scripts/module4.sh --demo    # print demo commands
+./scripts/module4.sh --scaffold # copy say_hello.sh and greet.sh to ~/unix_practice
+```
+
 - Module 1 content: [module1/README.md](module1/README.md)
 - Module 2 content: [module2/README.md](module2/README.md)
 - Module 3 content: [module3/README.md](module3/README.md)
+- Module 4 content: [module4/README.md](module4/README.md)

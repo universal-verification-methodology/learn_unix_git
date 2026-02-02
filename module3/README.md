@@ -20,7 +20,8 @@ module3/
 │   ├── redirection/   # >, >>, 2>, 2>&1, tee
 │   ├── pipes/         # |, grep, grep -i, sample log
 │   ├── background/    # &, jobs, tail -f
-│   └── troubleshooting/   # tee, 2>&1, failing command
+│   ├── troubleshooting/   # tee, 2>&1, failing command
+│   └── combining/     # 2>&1 | tee | grep, pipeline chains
 └── exercises/          # Exercise instructions and optional scaffold
     └── README.md       # Exercise checklist and setup
 ```
@@ -55,9 +56,17 @@ module3/
    grep -i error sample.log | less
    ```
 
-5. **More examples**: See `module3/examples/README.md` for background jobs and troubleshooting.
+5. **Try the combining example** (2>&1 | tee | grep):
+   ```bash
+   cd module3/examples/combining
+   chmod u+x combine_demo.sh
+   ./combine_demo.sh 2>&1 | tee run.log | grep -i error
+   cat run.log
+   ```
 
-6. **Exercises**: See [module3/exercises/README.md](exercises/README.md) and [docs/MODULE3.md](../docs/MODULE3.md#exercises).
+6. **More examples**: See `module3/examples/README.md` for background jobs and full command lists.
+
+7. **Exercises**: See [module3/exercises/README.md](exercises/README.md) and [docs/MODULE3.md](../docs/MODULE3.md#exercises).
 
 ## Next Steps
 

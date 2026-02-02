@@ -1,0 +1,20 @@
+# Module 4 aliases — commands to try (run in your shell)
+
+# Temporary aliases (current session only)
+alias ll='ls -alF'
+alias la='ls -A'
+alias cproj='cd ~/proj/learn_unix_git'
+
+# Use them
+ll
+cproj
+pwd
+
+# List all aliases
+alias
+
+# Remove an alias
+unalias ll
+
+# To persist: add the alias lines to ~/.bashrc or ~/.zshrc, then:
+# source ~/.bashrc   # or source ~/.zshrc

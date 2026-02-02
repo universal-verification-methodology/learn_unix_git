@@ -1,6 +1,6 @@
 # Module 3 Examples
 
-Hands-on examples for **Processes, Pipes & Redirection**: processes and exit status, redirection, pipes and grep, background jobs, and troubleshooting with tee.
+Hands-on examples for **Processes, Pipes & Redirection**: processes and exit status, redirection, pipes and grep, background jobs, troubleshooting with tee, and combining tools in one pipeline.
 
 ---
 
@@ -110,3 +110,24 @@ grep -i error debug.log
 ```
 
 See `troubleshooting/README.md` for debugging mindset and tee usage.
+
+---
+
+## 6. Combining tools (`combining/`)
+
+Practice **chaining** redirection, **tee**, and **grep** in one command: save full output to a log and show only matching lines on screen.
+
+**Layout**: `combine_demo.sh` (chmod u+x to run).
+
+**Try these**:
+
+```bash
+cd module3/examples/combining
+chmod u+x combine_demo.sh
+./combine_demo.sh 2>&1 | tee run.log | grep -i error
+cat run.log
+grep -c ERROR run.log
+cat run.log | grep -i error | wc -l
+```
+
+See `combining/README.md` for order of operations and more chains.
