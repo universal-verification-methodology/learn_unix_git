@@ -1,0 +1,14 @@
+# Module 6 add/commit/log — commands to try (run inside a Git repo)
+
+git add notes.md
+git status
+git commit -m "Add notes"
+git log
+git log --oneline
+git log --oneline -5
+
+# After making another change:
+echo "another line" >> notes.md
+git add notes.md
+git commit -m "Update notes"
+git log --oneline

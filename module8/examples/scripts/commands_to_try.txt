@@ -1,0 +1,15 @@
+# Module 8 scripts — commands to try
+
+# From learn_unix_git repo root:
+cd module8/examples/template/sample_project
+chmod +x scripts/run_demo.sh
+
+# Run script (output to terminal)
+./scripts/run_demo.sh
+
+# Redirect stdout and stderr to log
+./scripts/run_demo.sh > logs/run.log 2>&1
+cat logs/run.log
+
+# In a real project: run tests and capture log
+# ./scripts/run_tests.sh > logs/tests.log 2>&1

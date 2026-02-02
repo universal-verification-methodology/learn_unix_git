@@ -1,0 +1,19 @@
+# Module 7 submodules — commands to try
+
+# Add a submodule (replace URL and path with a real repo)
+# git submodule add https://github.com/some-org/example-repo.git external/example
+# git add .gitmodules external/example
+# git commit -m "Add example as submodule"
+
+# After cloning a repo that has submodules:
+git submodule update --init --recursive
+
+# Or clone with submodules in one step:
+# git clone --recurse-submodules <url>
+
+# Update submodule to latest and record in parent:
+# cd external/example
+# git pull
+# cd ../..
+# git add external/example
+# git commit -m "Update submodule to latest"

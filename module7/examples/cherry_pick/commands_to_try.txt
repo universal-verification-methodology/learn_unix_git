@@ -1,0 +1,21 @@
+# Git cherry-pick — try in a repo with a feature branch and commits
+
+# Find commit hash
+git log --oneline feature/readme-update
+git log --oneline main..feature/readme-update
+
+# Apply one commit to current branch
+git checkout main
+git cherry-pick <commit-hash>
+
+# Apply without committing (stage only)
+git cherry-pick -n <commit-hash>
+
+# If conflicts
+git add .
+git cherry-pick --continue
+# or
+git cherry-pick --abort
+
+# Range
+git cherry-pick A^..B

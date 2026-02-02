@@ -1,0 +1,16 @@
+# Module 8 logs — commands to try
+
+# Use sample_project logs (after running run_demo.sh):
+cd module8/examples/template/sample_project
+./scripts/run_demo.sh > logs/run.log 2>&1
+tail -20 logs/run.log
+less logs/run.log
+grep -i error logs/run.log
+grep -i info logs/run.log
+
+# Or use the sample log in this directory:
+cd module8/examples/logs
+grep ERROR sample.log
+grep -i warn sample.log
+tail -5 sample.log
+less sample.log

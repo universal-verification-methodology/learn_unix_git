@@ -1,0 +1,15 @@
+# Git stash — try in a repo with uncommitted changes (e.g. ~/unix_practice/git_demo)
+
+# Stash
+git status
+git stash
+git stash push -m "WIP: notes draft"
+
+# List and apply
+git stash list
+git stash apply
+git stash pop
+
+# Drop/clear
+git stash drop stash@{0}
+git stash clear

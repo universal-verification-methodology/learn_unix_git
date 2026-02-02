@@ -1,0 +1,11 @@
+# Module 7 branching — commands to try (run inside a Git repo)
+
+git branch
+git checkout -b feature/readme-update
+echo "Update from feature branch" >> notes.md
+git add notes.md
+git commit -m "Update notes on feature branch"
+git branch
+git checkout main
+git log --oneline --all
+git checkout feature/readme-update

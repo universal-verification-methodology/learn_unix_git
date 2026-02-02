@@ -1,0 +1,18 @@
+# Module 7 blame and bisect — commands to try (run inside a Git repo)
+
+# Blame: who changed each line?
+git blame notes.md
+git blame -L 1,10 notes.md
+git show <commit-hash>
+
+# Bisect: find first bad commit (conceptual)
+# git bisect start
+# git bisect bad
+# git bisect good <known-good-commit-hash>
+# ... test current revision, then:
+# git bisect good   # or  git bisect bad
+# ... repeat until Git reports first bad commit
+# git bisect reset
+
+# Automated bisect (if you have a test script that exits 0 = good, non-zero = bad):
+# git bisect run ./scripts/test.sh

@@ -1,0 +1,12 @@
+This file shows how Git marks merge conflicts (for reference only).
+In a real conflict, Git inserts these markers into your file.
+
+<<<<<<< HEAD
+This is the version from the current branch (e.g. main).
+Keep this if you want the main-branch change.
+=======
+This is the version from the branch being merged (e.g. feature/x).
+Keep this if you want the feature-branch change.
+>>>>>>> feature/x
+
+To resolve: choose one version (or combine both), then delete the markers and the line you don't want. Save, then git add <file> and git commit.

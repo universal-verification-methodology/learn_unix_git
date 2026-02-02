@@ -1,0 +1,19 @@
+# Module 8 submission — commands to try (in a repo with remote)
+
+# Pre-submission
+git status
+git log --oneline -5
+# Ensure build/ and logs/ are in .gitignore
+cat .gitignore
+
+# Optional: clean simulation (in a COPY of the repo)
+# git clone <your-repo> repo_copy && cd repo_copy
+# git clean -fdx
+# ./scripts/run_tests.sh
+
+# Push
+git push
+# or: git push -u origin main
+# or: git push -u origin lab1
+
+# Verify on GitHub: repo page shows latest commits and no unwanted files

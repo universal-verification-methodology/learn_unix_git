@@ -1,0 +1,9 @@
+# Pre-push checks — run in a Git repo before git push
+
+git status
+git log --oneline -5
+git pull
+git push
+
+# Or run the script (from repo root):
+# ./module8/examples/pre_push_checks/check_ready.sh

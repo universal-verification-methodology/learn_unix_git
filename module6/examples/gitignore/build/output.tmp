@@ -1,0 +1,2 @@
+# Dummy file to show build/ can be ignored by .gitignore.
+# In a real repo, add build/ to .gitignore so git status doesn't list these files.

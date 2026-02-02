@@ -1,0 +1,2 @@
+Different content
+for side-by-side diff

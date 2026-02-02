@@ -1,0 +1,15 @@
+# Git rebase — try in a repo with a feature branch (e.g. feature/readme-update)
+
+git checkout feature/readme-update
+git rebase main
+git log --oneline --graph --all
+
+# Interactive (squash, reword, etc.)
+git rebase -i main
+git rebase -i HEAD~3
+
+# If already pushed (use with care)
+git push --force-with-lease
+
+# Abort
+git rebase --abort

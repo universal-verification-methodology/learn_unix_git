@@ -1,0 +1,22 @@
+# Module 8 iterative development — commands to try (in a Git repo)
+
+# Edit
+echo "New change" >> notes.md
+
+# Run (if you have a script)
+# ./scripts/run_demo.sh > logs/run.log 2>&1
+
+# Inspect
+git status
+git diff
+# grep -i error logs/run.log
+
+# Stage and commit
+git add notes.md
+git commit -m "Describe what you changed and why"
+git log --oneline -3
+
+# Branch for larger task
+# git checkout -b lab2
+# ... edit, run, commit ...
+# git checkout main && git merge lab2

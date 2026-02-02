@@ -1,0 +1,11 @@
+# Git tags — try in a repo with some commits (e.g. ~/unix_practice/git_demo)
+
+git tag
+git tag -l "v*"
+git tag v1.0
+git tag -a v1.0 -m "Release 1.0"
+git show v1.0
+git log -1 --oneline v1.0
+git checkout v1.0
+git push origin v1.0
+git push origin --tags

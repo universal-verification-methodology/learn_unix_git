@@ -1,0 +1,16 @@
+# Module 6 remote and undo — commands to try
+
+# Remotes (in a cloned repo or one with remote added)
+git remote -v
+git pull
+git push
+git push -u origin main
+
+# Safe undo — discard unstaged changes in a file
+# (First modify a tracked file, do NOT git add)
+git restore notes.md
+
+# Unstage a file (keep changes in working tree)
+git add notes.md
+git restore --staged notes.md
+git status

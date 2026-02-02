@@ -1,0 +1,15 @@
+# Module 6 status/diff — commands to try (run inside a Git repo)
+
+# From ~/unix_practice/git_demo (after scaffold) or learn_unix_git repo root
+
+git status
+echo "new line for diff demo" >> notes.md
+git status
+git diff
+git diff notes.md
+git add notes.md
+git status
+git diff
+git diff --staged
+git restore --staged notes.md
+git status

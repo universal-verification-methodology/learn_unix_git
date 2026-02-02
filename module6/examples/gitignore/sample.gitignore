@@ -1,0 +1,18 @@
+# Module 6 gitignore example — copy to your repo root as .gitignore
+# Build and output directories
+build/
+out/
+obj/
+
+# Logs and waveforms
+*.log
+*.vcd
+
+# Object files (C/C++)
+*.o
+*.a
+
+# OS and editor cruft (optional)
+.DS_Store
+*.swp
+*~

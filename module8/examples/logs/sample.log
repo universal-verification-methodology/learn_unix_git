@@ -1,0 +1,11 @@
+[INFO] Module 8 logs example — sample log for grep/tail/less practice
+[INFO] Build started at 2024-02-03 10:00:00
+[INFO] Compiling src/top.v
+[WARN] Unused signal 'debug_q' in block top
+[INFO] Compilation complete
+[INFO] Running testbench
+[ERROR] Assertion failed at line 42: expected 0x0, got 0x1
+[WARN] Timeout threshold approaching
+[INFO] Test run finished
+[ERROR] 1 test failed
+[INFO] End of log

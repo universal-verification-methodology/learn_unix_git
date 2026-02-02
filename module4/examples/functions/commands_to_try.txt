@@ -1,0 +1,20 @@
+# Shell functions — copy-paste into your shell (or add to ~/.bashrc)
+
+# Simple: one argument
+greet() { echo "Hello, $1"; }
+greet Alice
+
+# Pass all arguments
+count() { wc -l "$@"; }
+count *.txt
+
+# Multi-line (semicolons or newlines)
+show_status() {
+  echo "PWD: $(pwd)"
+  echo "Files: $(ls | wc -l)"
+}
+show_status
+
+# List your functions
+declare -f
+type greet

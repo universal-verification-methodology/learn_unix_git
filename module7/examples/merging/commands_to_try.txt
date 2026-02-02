@@ -1,0 +1,10 @@
+# Module 7 merging — commands to try (run inside a Git repo with a feature branch)
+
+git checkout main
+git merge feature/readme-update
+git log --oneline --graph --all
+git branch -d feature/readme-update
+
+# If main has new commits: merge creates a merge commit
+# git checkout main
+# git merge feature/readme-update

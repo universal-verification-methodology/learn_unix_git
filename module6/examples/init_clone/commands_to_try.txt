@@ -1,0 +1,19 @@
+# Module 6 init/clone — commands to try
+
+# Create new repo
+mkdir -p ~/unix_practice/my_repo
+cd ~/unix_practice/my_repo
+git init
+ls -la .git
+
+# Or use scaffold (creates ~/unix_practice/git_demo with init + sample file)
+# From repo root: ./scripts/module6.sh --scaffold
+# cd ~/unix_practice/git_demo
+# git status
+
+# Clone existing repo (replace URL with a real public repo)
+cd ~/unix_practice
+git clone https://github.com/some-org/some-repo.git
+cd some-repo
+git status
+git log --oneline | head -5
