@@ -1,0 +1,4 @@
+This is the original file for Module 1 file-operations practice.
+Copy it with:  cp original.txt newname.txt
+Move it with:  mv original.txt somewhere/
+You can safely delete any copies you make in this folder.

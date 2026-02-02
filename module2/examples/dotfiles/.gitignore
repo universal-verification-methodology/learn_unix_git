@@ -1,0 +1,3 @@
+# Example .gitignore for Module 2 dotfiles example
+*.log
+.DS_Store

@@ -1,0 +1,1 @@
+This is a short file. Use "cat short.txt" to print the whole thing. Good for small configs and one-off notes.

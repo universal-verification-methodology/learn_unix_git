@@ -1,0 +1,3 @@
+Sample file for Module 2 file-types example.
+Use ls -l to see it as a regular file (-).
+The symlink my_symlink points to this file.

@@ -12,6 +12,18 @@
 
 ---
 
+## Running Module 2
+
+From the repo root:
+
+- **Self-check**: `./scripts/module2.sh --check`
+- **Demo commands**: `./scripts/module2.sh --demo`
+- **Exercise scaffold**: `./scripts/module2.sh --scaffold` (copies `hello.sh` to `~/unix_practice/` for chmod practice)
+
+See [module2/README.md](../module2/README.md) for examples and quick start.
+
+---
+
 ## Overview
 
 This module explains how Unix represents files, directories, and permissions, and how the environment (variables like `PATH`) affects the tools students use for digital design. By the end of this module, students should understand why some commands fail with “Permission denied” or “command not found” and how to fix those issues safely.

@@ -20,7 +20,7 @@ From the repo root:
 - **Demo commands**: `./scripts/module1.sh --demo`
 - **Exercise scaffold**: `./scripts/module1.sh --scaffold` (creates `~/unix_practice/`)
 
-See [module1/README.md](../module1/README.md) for examples and quick start.
+See [module1/README.md](../module1/README.md) for examples and quick start. Examples include: **navigation**, **paths** (absolute vs relative), **file_operations** (cp, mv, mkdir, rm), **viewing** (cat, head, tail, less), **design_files** (RTL-style .v/.sv/.md/.cpp), and **help** (man, --help).
 
 ---
 
