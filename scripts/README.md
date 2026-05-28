@@ -6,14 +6,18 @@ Scripts for running module checks, demos, scaffolds, Git helpers, and **slides/P
 
 | Script | Purpose |
 |--------|---------|
-| `build_all_media.sh` | Build **all** modules: pptx → pdf → video |
-| `verify_all_media.sh` | Verify outlines, assets, and deliverables |
-| `generate_media_outlines.py` | Regenerate `media/moduleN/outline.yaml` (modules 2–8) |
+| `build_all_media.sh` | **Full skill pipeline** — pptx → pdf → TTS → video (all modules) |
+| `regenerate_media_outlines.sh` | Regenerate outlines only (skill: syllabus + all EXAMPLES) |
+| `generate_media_outlines.py` | Same as `regenerate_media_outlines.sh` (legacy name) |
+| `verify_all_media.sh` | Verify outlines, assets, audio on video |
+
+Uses skill: `~/.cursor/skills/module-to-slides-video` (set `SKILL_ROOT` to override).
 
 ```bash
-./scripts/build_all_media.sh              # full build
-./scripts/build_all_media.sh --module 3   # one module
-./scripts/verify_all_media.sh             # quick check
+./scripts/build_all_media.sh                      # rebuild with existing outlines
+./scripts/build_all_media.sh --regenerate-outlines  # full decks + rebuild
+./scripts/build_all_media.sh --module 3 --run-demos
+./scripts/verify_all_media.sh
 ```
 
 Outputs: `media/moduleN/slides.pptx`, `slides.pdf`, `video.mp4`. See [media/README.md](../media/README.md) and [media/INDEX.md](../media/INDEX.md).

@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 #
-# Build slides (pptx), PDF, and video for all learn_unix_git modules.
+# Build slides (pptx), PDF, and narrated video for all learn_unix_git modules.
+# Uses the module-to-slides-video skill (~/.cursor/skills/module-to-slides-video).
 #
-# Usage (from repo root or anywhere):
+# Usage (from repo root):
 #   ./scripts/build_all_media.sh
+#   ./scripts/build_all_media.sh --regenerate-outlines   # full syllabus + EXAMPLES → outlines
 #   ./scripts/build_all_media.sh --pptx-only
 #   ./scripts/build_all_media.sh --module 3
-#   ./scripts/build_all_media.sh --regenerate-outlines   # refresh outline.yaml from generator
-#   ./scripts/build_all_media.sh --install-deps          # apt install libreoffice ffmpeg (needs sudo)
+#   ./scripts/build_all_media.sh --install-deps
 #
 set -euo pipefail
 
@@ -31,16 +32,33 @@ RUN_DEMOS=1
 EXTRA_ARGS=()
 
 usage() {
-  sed -n '3,14p' "$0" | sed 's/^# \{0,1\}//'
-  echo ""
-  echo "Options:"
-  echo "  --pptx-only            Skip PDF and video"
-  echo "  --module N             Only module N or list 1,2,3"
-  echo "  --regenerate-outlines  Run generate_media_outlines.py (modules 2-8)"
-  echo "  --install-deps         sudo apt install libreoffice ffmpeg poppler-utils"
-  echo "  --seconds-per-slide N  Video timing (default: 8)"
-  echo "  --no-run-demos         Skip running capture commands during verify"
-  echo "  -h, --help             Show help"
+  cat <<EOF
+Usage: $0 [options]
+
+One command for the full skill pipeline (same as module-to-slides-video):
+
+  1. (optional) regenerate_course_outlines.sh  — docs/MODULE*.md + EXAMPLES.md
+  2. build_course_media.sh                     — diagrams, captures, pptx, pdf, TTS, video
+
+Options:
+  --regenerate-outlines   Regenerate all outline.yaml before build (~39–42 slides/module)
+  --pptx-only             Stop after slides.pptx
+  --module N              Only module N or comma list: 1,2,3
+  --install-deps          sudo apt: libreoffice-impress, ffmpeg, poppler-utils
+  --seconds-per-slide N   Silent video timing if no narration (default: 8)
+  --no-run-demos          Skip capture commands during verify (faster rebuild)
+  --no-narration          Silent video only
+  --burn-captions         Burn subtitles into video
+  --skip-capture          Reuse existing screenshots
+  --skip-diagrams         Skip Mermaid render
+  -h, --help              Show this help
+
+Also:
+  ./scripts/regenerate_media_outlines.sh       # outlines only (skill)
+  ./scripts/verify_all_media.sh                # verify after build
+
+Skill: $SKILL_ROOT
+EOF
 }
 
 log() { echo -e "${CYAN}==>${NC} $*"; }
@@ -61,7 +79,9 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-[[ -d "$SKILL_SCRIPTS" ]] || die "Skill not found: $SKILL_SCRIPTS (expected module-to-slides-video skill)"
+[[ -d "$SKILL_SCRIPTS" ]] || die "Skill not found: $SKILL_SCRIPTS"
+[[ -x "$SKILL_SCRIPTS/regenerate_course_outlines.sh" ]] || die "Missing: $SKILL_SCRIPTS/regenerate_course_outlines.sh"
+[[ -x "$SKILL_SCRIPTS/build_course_media.sh" ]] || die "Missing: $SKILL_SCRIPTS/build_course_media.sh"
 
 install_system_deps() {
   log "Installing system packages (sudo required)..."
@@ -76,15 +96,15 @@ check_system_deps() {
   local missing=0
   if [[ $PPTX_ONLY -eq 0 ]]; then
     command -v soffice >/dev/null 2>&1 || command -v libreoffice >/dev/null 2>&1 || {
-      warn "LibreOffice not found — PDF/video will be skipped (run with --install-deps)"
+      warn "LibreOffice not found — PDF/video may fail (use --install-deps)"
       missing=1
     }
     command -v ffmpeg >/dev/null 2>&1 || {
-      warn "ffmpeg not found — video will be skipped (run with --install-deps)"
+      warn "ffmpeg not found — video will fail (use --install-deps)"
       missing=1
     }
     command -v pdftoppm >/dev/null 2>&1 || {
-      warn "pdftoppm not found — video will be skipped (run with --install-deps)"
+      warn "pdftoppm not found — video may fail (use --install-deps)"
       missing=1
     }
   fi
@@ -101,15 +121,10 @@ fi
 log "Setting up Python skill venv..."
 bash "$SKILL_SCRIPTS/setup.sh" | tail -3
 
+# Regenerate outlines via skill (all modules, full syllabus + examples)
 if [[ $REGENERATE -eq 1 ]]; then
-  log "Regenerating outline.yaml for modules 2-8..."
-  "$SKILL_SCRIPTS/run_python.sh" "$COURSE_ROOT/scripts/generate_media_outlines.py"
-fi
-
-# Ensure module 1 media exists
-if [[ ! -f "$COURSE_ROOT/media/module1/outline.yaml" ]]; then
-  warn "module1 media missing — run skill scaffold or copy module1 outline"
-  bash "$SKILL_SCRIPTS/scaffold_media.sh" "$COURSE_ROOT" 1 || true
+  log "Regenerating outlines (skill: generate_outline_from_module.py)..."
+  bash "$SCRIPT_DIR/regenerate_media_outlines.sh"
 fi
 
 BUILD_ARGS=("$COURSE_ROOT")
@@ -117,12 +132,23 @@ BUILD_ARGS=("$COURSE_ROOT")
 [[ $PPTX_ONLY -eq 1 ]] && BUILD_ARGS+=(--pptx-only)
 [[ $RUN_DEMOS -eq 1 ]] && BUILD_ARGS+=(--run-demos)
 BUILD_ARGS+=(--seconds-per-slide "$SECONDS_PER_SLIDE")
+# Allow skill-only flags: --no-narration, --burn-captions, --skip-capture, etc.
 BUILD_ARGS+=("${EXTRA_ARGS[@]}")
 
 check_system_deps || true
 
-log "Building media for all modules..."
+log "Building media (skill: build_course_media.sh)..."
 bash "$SKILL_SCRIPTS/build_course_media.sh" "${BUILD_ARGS[@]}"
+
+echo ""
+log "Slide counts:"
+for n in 1 2 3 4 5 6 7 8; do
+  o="$COURSE_ROOT/media/module$n/outline.yaml"
+  if [[ -f "$o" ]]; then
+    c=$(grep -c "type:" "$o" 2>/dev/null || echo 0)
+    echo "  module $n: $c slides"
+  fi
+done
 
 echo ""
 log "Outputs:"
@@ -136,10 +162,7 @@ if [[ $PPTX_ONLY -eq 0 ]]; then
   for f in "$COURSE_ROOT"/media/module*/video.mp4; do
     [[ -f "$f" ]] && echo "  mp4:  $f"
   done
-  pdf_count=$(find "$COURSE_ROOT/media" -name slides.pdf 2>/dev/null | wc -l)
-  if [[ "$pdf_count" -lt 8 ]]; then
-    warn "Some PDFs missing — run again or: $0 --install-deps (libreoffice-impress for PPTX-native PDF)"
-  fi
 fi
 
-ok "Done. Review under: $COURSE_ROOT/media/"
+log "Verify (optional): ./scripts/verify_all_media.sh"
+ok "Done. Review: $COURSE_ROOT/media/"

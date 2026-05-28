@@ -17,7 +17,7 @@ From the `learn_unix_git` repo root:
 | `--install-deps` | `sudo apt install` LibreOffice Impress, ffmpeg, poppler (optional; improves PDF) |
 | `--pptx-only` | Skip PDF and video |
 | `--module 2` | Single module |
-| `--regenerate-outlines` | Refresh `outline.yaml` from `generate_media_outlines.py` |
+| `--regenerate-outlines` | Full syllabus + all EXAMPLES → `outline.yaml` (skill generator) |
 | `--no-run-demos` | Reuse existing terminal screenshots (faster) |
 
 Requires the Cursor skill: `~/.cursor/skills/module-to-slides-video` (run `bash …/scripts/setup.sh` once).
@@ -31,7 +31,7 @@ Requires the Cursor skill: `~/.cursor/skills/module-to-slides-video` (run `bash 
 | `assets/manifest.yaml` | Images and demo capture commands |
 | `slides.pptx` | **Primary deck** — edit in PowerPoint |
 | `slides.pdf` | PDF export (from PPTX via LibreOffice, or from slide frames) |
-| `video.mp4` | Silent preview (~8 s/slide; add `audio/narration.wav` for voice) |
+| `video.mp4` | Slides + **TTS narration** (`audio/narration.wav`, `captions.srt`) |
 
 ## Review all modules
 
@@ -43,14 +43,15 @@ xdg-open media/module1/slides.pptx   # or open in PowerPoint on Windows
 ls -lh media/module*/slides.{pptx,pdf} media/module*/video.mp4
 ```
 
-## Regenerate outlines (modules 2–8)
+## Regenerate outlines + full rebuild (skill)
 
 ```bash
-./scripts/generate_media_outlines.py
-./scripts/build_all_media.sh --no-run-demos
+./scripts/build_all_media.sh --regenerate-outlines
+# or outlines only:
+./scripts/regenerate_media_outlines.sh
 ```
 
-Edit `outline.yaml` by hand after generation to refine slides from `docs/MODULEN.md`.
+Uses `~/.cursor/skills/module-to-slides-video` (same as other courses in the monorepo). Expect ~39–42 slides per module. Optional: `media/outline_overrides.yaml` for tricky demo captures.
 
 ## Git
 
