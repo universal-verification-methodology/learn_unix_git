@@ -1,0 +1,27 @@
+[Slide 1] Processes, Pipes & Redirection Module 3
+
+[Slide 2] Learning objectives Stop foreground jobs with Ctrl+C Redirect stdout/stderr to log files Chain commands with pipes Search simulator logs with grep
+
+[Slide 3] Prerequisites Module 2 (permissions, executable scripts)
+
+[Slide 4] Learning path
+
+[Slide 5] Course context Save build/sim output: command > run.log 2>&1 Filter errors: grep -i error run.log Exit status $? indicates success or failure
+
+[Slide 6] Core topics
+
+[Slide 7] Self-check Watch the terminal demonstration on screen.
+
+[Slide 8] Capture full log The following command is shown on screen.
+
+[Slide 9] Searching logs Watch the terminal demonstration on screen.
+
+[Slide 10] Redirection demo Watch the terminal demonstration on screen.
+
+[Slide 11] Practice
+
+[Slide 12] Exercise scaffold The following command is shown on screen.
+
+[Slide 13] Exercises grep ERROR on ~/unix_practice/sample.log Try 2>&1 | tee debug.log Check echo $? after a command
+
+[Slide 14] Summary & next steps Processes and exit status Redirection and pipes Next: Module 4 — shell scripting Next: Module 4: Shell Productivity & Basic Scripting

@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:03,408
+Git Basics for Course Work Module 6
+
+2
+00:00:03,758 --> 00:00:15,254
+Learning objectives Explain working tree, staging, and commits Use status, add, commit, log, diff Clone and push to GitHub Write a useful .gitignore for build artifacts
+
+3
+00:00:15,604 --> 00:00:20,332
+Prerequisites Module 5 (project structure) git installed
+
+4
+00:00:20,682 --> 00:00:22,602
+Learning path
+
+5
+00:00:22,952 --> 00:00:30,968
+Course context Course work is submitted via Git Never commit build/ or large waveforms Small focused commits are easier to review
+
+6
+00:00:31,318 --> 00:00:33,310
+Core topics
+
+7
+00:00:33,660 --> 00:00:37,428
+Self-check Watch the terminal demonstration on screen.
+
+8
+00:00:37,778 --> 00:00:41,618
+Basic workflow The following command is shown on screen.
+
+9
+00:00:41,968 --> 00:00:46,048
+Git installation Watch the terminal demonstration on screen.
+
+10
+00:00:46,398 --> 00:00:50,646
+Exploring git help Watch the terminal demonstration on screen.
+
+11
+00:00:50,996 --> 00:00:52,748
+Practice
+
+12
+00:00:53,098 --> 00:00:57,106
+Exercise scaffold The following command is shown on screen.
+
+13
+00:00:57,456 --> 00:01:04,392
+Exercises Scaffold git_demo and make a commit Write .gitignore for build/ git log --oneline
+
+14
+00:01:04,742 --> 00:01:14,942
+Summary & next steps Local Git workflow Remotes and GitHub Next: Module 7 — collaboration Next: Module 7: Advanced Git for Collaboration

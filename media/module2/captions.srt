@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:04,032
+Filesystem, Permissions & Environment Module 2
+
+2
+00:00:04,382 --> 00:00:17,534
+Learning objectives Read ls -l output (types, permissions, owner) Use chmod to make scripts executable safely Explain HOME, PATH, and which Fix common permission denied and command not found errors
+
+3
+00:00:17,884 --> 00:00:24,316
+Prerequisites Module 1 complete (cd, ls, pwd, basic files)
+
+4
+00:00:24,666 --> 00:00:26,586
+Learning path
+
+5
+00:00:26,936 --> 00:00:35,816
+Course context Simulators and tools depend on PATH Scripts in projects need chmod +x Dotfiles like .gitignore appear in every repo
+
+6
+00:00:36,166 --> 00:00:38,158
+Core topics
+
+7
+00:00:38,508 --> 00:00:42,276
+Self-check Watch the terminal demonstration on screen.
+
+8
+00:00:42,626 --> 00:00:46,946
+Make a script executable The following command is shown on screen.
+
+9
+00:00:47,296 --> 00:00:51,736
+ls -l and permissions Watch the terminal demonstration on screen.
+
+10
+00:00:52,086 --> 00:00:56,694
+Finding commands on PATH Watch the terminal demonstration on screen.
+
+11
+00:00:57,044 --> 00:00:58,796
+Practice
+
+12
+00:00:59,146 --> 00:01:03,154
+Exercise scaffold The following command is shown on screen.
+
+13
+00:01:03,504 --> 00:01:14,064
+Exercises chmod on ~/unix_practice/hello.sh echo $PATH and which for git ls -la to see dotfiles in examples/dotfiles
+
+14
+00:01:14,414 --> 00:01:26,798
+Summary & next steps File types and rwx permissions PATH and environment Next: Module 3 — processes & pipes Next: Module 3: Processes, Pipes & Redirection

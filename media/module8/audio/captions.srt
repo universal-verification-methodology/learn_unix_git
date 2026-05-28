@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:03,192
+End-to-End Project Workflow Module 8
+
+2
+00:00:03,542 --> 00:00:13,598
+Learning objectives Bootstrap a project from a template repo Run scripted build/test flows Capture and analyze logs Commit milestones and push for submission
+
+3
+00:00:13,948 --> 00:00:18,508
+Prerequisites Modules 1–7 or equivalent experience
+
+4
+00:00:18,858 --> 00:00:20,778
+Learning path
+
+5
+00:00:21,128 --> 00:00:29,960
+Course context Full loop: edit → run → inspect → commit → push Reproducibility matters for grading and debug Pre-push checks catch common mistakes
+
+6
+00:00:30,310 --> 00:00:32,302
+Core topics
+
+7
+00:00:32,652 --> 00:00:36,420
+Self-check Watch the terminal demonstration on screen.
+
+8
+00:00:36,770 --> 00:00:40,898
+Run with log capture The following command is shown on screen.
+
+9
+00:00:41,248 --> 00:00:45,376
+Scripted workflow Watch the terminal demonstration on screen.
+
+10
+00:00:45,726 --> 00:00:49,806
+Log inspection Watch the terminal demonstration on screen.
+
+11
+00:00:50,156 --> 00:00:51,908
+Practice
+
+12
+00:00:52,258 --> 00:01:00,274
+Exercises Walk through sample_project/ Make a commit after a script run Review pre-push checklist in module8
+
+13
+00:01:00,624 --> 00:01:11,568
+Summary & next steps Unix + Git + scripts together You are ready for design courses Course complete — keep practicing Next: Digital design & verification courses

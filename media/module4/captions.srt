@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:03,936
+Shell Productivity & Basic Scripting Module 4
+
+2
+00:00:04,286 --> 00:00:15,422
+Learning objectives Use history and Ctrl+R effectively Write scripts with shebang and chmod +x Pass arguments with $1 and $@ Apply set -e and quoted variables
+
+3
+00:00:15,772 --> 00:00:19,828
+Prerequisites Module 3 (redirection, pipes)
+
+4
+00:00:20,178 --> 00:00:22,098
+Learning path
+
+5
+00:00:22,448 --> 00:00:31,736
+Course context Wrap compile/sim steps in scripts/ Course module scripts are the pattern to follow Quote variables to avoid word-splitting bugs
+
+6
+00:00:32,086 --> 00:00:34,078
+Core topics
+
+7
+00:00:34,428 --> 00:00:38,196
+Self-check Watch the terminal demonstration on screen.
+
+8
+00:00:38,546 --> 00:00:42,290
+Minimal script The following command is shown on screen.
+
+9
+00:00:42,640 --> 00:00:46,864
+First bash script Watch the terminal demonstration on screen.
+
+10
+00:00:47,214 --> 00:00:51,606
+Positional parameters Watch the terminal demonstration on screen.
+
+11
+00:00:51,956 --> 00:00:53,708
+Practice
+
+12
+00:00:54,058 --> 00:00:58,066
+Exercise scaffold The following command is shown on screen.
+
+13
+00:00:58,416 --> 00:01:08,136
+Exercises Run say_hello.sh and greet.sh from scaffold Add an alias ll='ls -alF' Write a loop over *.log
+
+14
+00:01:08,486 --> 00:01:20,990
+Summary & next steps Scripts automate design flows History and aliases save time Next: Module 5 — projects & archives Next: Module 5: Editors, Projects & Archives

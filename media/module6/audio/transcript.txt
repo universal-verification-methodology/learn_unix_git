@@ -1,0 +1,27 @@
+[Slide 1] Git Basics for Course Work Module 6
+
+[Slide 2] Learning objectives Explain working tree, staging, and commits Use status, add, commit, log, diff Clone and push to GitHub Write a useful .gitignore for build artifacts
+
+[Slide 3] Prerequisites Module 5 (project structure) git installed
+
+[Slide 4] Learning path
+
+[Slide 5] Course context Course work is submitted via Git Never commit build/ or large waveforms Small focused commits are easier to review
+
+[Slide 6] Core topics
+
+[Slide 7] Self-check Watch the terminal demonstration on screen.
+
+[Slide 8] Basic workflow The following command is shown on screen.
+
+[Slide 9] Git installation Watch the terminal demonstration on screen.
+
+[Slide 10] Exploring git help Watch the terminal demonstration on screen.
+
+[Slide 11] Practice
+
+[Slide 12] Exercise scaffold The following command is shown on screen.
+
+[Slide 13] Exercises Scaffold git_demo and make a commit Write .gitignore for build/ git log --oneline
+
+[Slide 14] Summary & next steps Local Git workflow Remotes and GitHub Next: Module 7 — collaboration Next: Module 7: Advanced Git for Collaboration

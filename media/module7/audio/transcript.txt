@@ -1,0 +1,25 @@
+[Slide 1] Advanced Git for Collaboration Module 7
+
+[Slide 2] Learning objectives Create and switch feature branches Merge branches and resolve conflicts Understand submodules for shared IP Use git blame and bisect conceptually
+
+[Slide 3] Prerequisites Module 6 (add, commit, push)
+
+[Slide 4] Learning path
+
+[Slide 5] Course context Team labs use branches per feature Conflicts happen when two people edit same lines Verification IP may live in submodules
+
+[Slide 6] Core topics
+
+[Slide 7] Self-check Watch the terminal demonstration on screen.
+
+[Slide 8] Feature branch The following command is shown on screen.
+
+[Slide 9] Merge conflict format Watch the terminal demonstration on screen.
+
+[Slide 10] Branches Watch the terminal demonstration on screen.
+
+[Slide 11] Practice
+
+[Slide 12] Exercises Create branch in git_demo Resolve sample_conflict.txt on paper Try git submodule update --init
+
+[Slide 13] Summary & next steps Branching and merging Conflicts and submodules Next: Module 8 — end-to-end workflow Next: Module 8: End-to-End Project Workflow

@@ -1,0 +1,27 @@
+[Slide 1] Shell Productivity & Basic Scripting Module 4
+
+[Slide 2] Learning objectives Use history and Ctrl+R effectively Write scripts with shebang and chmod +x Pass arguments with $1 and $@ Apply set -e and quoted variables
+
+[Slide 3] Prerequisites Module 3 (redirection, pipes)
+
+[Slide 4] Learning path
+
+[Slide 5] Course context Wrap compile/sim steps in scripts/ Course module scripts are the pattern to follow Quote variables to avoid word-splitting bugs
+
+[Slide 6] Core topics
+
+[Slide 7] Self-check Watch the terminal demonstration on screen.
+
+[Slide 8] Minimal script The following command is shown on screen.
+
+[Slide 9] First bash script Watch the terminal demonstration on screen.
+
+[Slide 10] Positional parameters Watch the terminal demonstration on screen.
+
+[Slide 11] Practice
+
+[Slide 12] Exercise scaffold The following command is shown on screen.
+
+[Slide 13] Exercises Run say_hello.sh and greet.sh from scaffold Add an alias ll='ls -alF' Write a loop over *.log
+
+[Slide 14] Summary & next steps Scripts automate design flows History and aliases save time Next: Module 5 — projects & archives Next: Module 5: Editors, Projects & Archives

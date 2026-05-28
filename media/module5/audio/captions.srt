@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:03,792
+Editors, Projects & Archives Module 5
+
+2
+00:00:04,142 --> 00:00:16,694
+Learning objectives Use a consistent src/tb/scripts/build layout Find files and search with grep -R Create and extract tar.gz archives Back up projects before major changes
+
+3
+00:00:17,044 --> 00:00:20,836
+Prerequisites Module 4 (basic scripts)
+
+4
+00:00:21,186 --> 00:00:23,106
+Learning path
+
+5
+00:00:23,456 --> 00:00:32,264
+Course context RTL projects mirror course repo structure Exclude build/ from archives and Git grep -R finds signals across a tree
+
+6
+00:00:32,614 --> 00:00:34,606
+Core topics
+
+7
+00:00:34,956 --> 00:00:38,724
+Self-check Watch the terminal demonstration on screen.
+
+8
+00:00:39,074 --> 00:00:42,842
+Create archive The following command is shown on screen.
+
+9
+00:00:43,192 --> 00:00:47,320
+Project structure Watch the terminal demonstration on screen.
+
+10
+00:00:47,670 --> 00:00:51,630
+tar archives Watch the terminal demonstration on screen.
+
+11
+00:00:51,980 --> 00:00:53,732
+Practice
+
+12
+00:00:54,082 --> 00:00:58,090
+Exercise scaffold The following command is shown on screen.
+
+13
+00:00:58,440 --> 00:01:06,816
+Exercises Scaffold unix_course_project/ grep -R in sample_project Create a tar.gz backup
+
+14
+00:01:07,166 --> 00:01:19,694
+Summary & next steps Organize src/tb/scripts/build Archives for sharing Next: Module 6 — Git basics Next: Module 6: Git Basics for Course Work

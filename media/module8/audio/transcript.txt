@@ -1,0 +1,25 @@
+[Slide 1] End-to-End Project Workflow Module 8
+
+[Slide 2] Learning objectives Bootstrap a project from a template repo Run scripted build/test flows Capture and analyze logs Commit milestones and push for submission
+
+[Slide 3] Prerequisites Modules 1–7 or equivalent experience
+
+[Slide 4] Learning path
+
+[Slide 5] Course context Full loop: edit → run → inspect → commit → push Reproducibility matters for grading and debug Pre-push checks catch common mistakes
+
+[Slide 6] Core topics
+
+[Slide 7] Self-check Watch the terminal demonstration on screen.
+
+[Slide 8] Run with log capture The following command is shown on screen.
+
+[Slide 9] Scripted workflow Watch the terminal demonstration on screen.
+
+[Slide 10] Log inspection Watch the terminal demonstration on screen.
+
+[Slide 11] Practice
+
+[Slide 12] Exercises Walk through sample_project/ Make a commit after a script run Review pre-push checklist in module8
+
+[Slide 13] Summary & next steps Unix + Git + scripts together You are ready for design courses Course complete — keep practicing Next: Digital design & verification courses

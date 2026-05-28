@@ -1,0 +1,27 @@
+[Slide 1] Filesystem, Permissions & Environment Module 2
+
+[Slide 2] Learning objectives Read ls -l output (types, permissions, owner) Use chmod to make scripts executable safely Explain HOME, PATH, and which Fix common permission denied and command not found errors
+
+[Slide 3] Prerequisites Module 1 complete (cd, ls, pwd, basic files)
+
+[Slide 4] Learning path
+
+[Slide 5] Course context Simulators and tools depend on PATH Scripts in projects need chmod +x Dotfiles like .gitignore appear in every repo
+
+[Slide 6] Core topics
+
+[Slide 7] Self-check Watch the terminal demonstration on screen.
+
+[Slide 8] Make a script executable The following command is shown on screen.
+
+[Slide 9] ls -l and permissions Watch the terminal demonstration on screen.
+
+[Slide 10] Finding commands on PATH Watch the terminal demonstration on screen.
+
+[Slide 11] Practice
+
+[Slide 12] Exercise scaffold The following command is shown on screen.
+
+[Slide 13] Exercises chmod on ~/unix_practice/hello.sh echo $PATH and which for git ls -la to see dotfiles in examples/dotfiles
+
+[Slide 14] Summary & next steps File types and rwx permissions PATH and environment Next: Module 3 — processes & pipes Next: Module 3: Processes, Pipes & Redirection

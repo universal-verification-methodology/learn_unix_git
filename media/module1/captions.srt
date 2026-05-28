@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:04,056
+Welcome to Module 1 of learn_unix_git…
+
+2
+00:00:04,406 --> 00:00:07,718
+By the end you will navigate the shell confidently…
+
+3
+00:00:08,068 --> 00:00:13,612
+You need a Unix-like terminal—Linux, macOS, or WSL2…
+
+4
+00:00:13,962 --> 00:00:18,066
+We progress from terminal basics to help and exercises…
+
+5
+00:00:18,416 --> 00:00:22,544
+These skills underpin running simulators and reading logs…
+
+6
+00:00:22,894 --> 00:00:25,342
+Terminal & navigation
+
+7
+00:00:25,692 --> 00:00:36,180
+Shell vs terminal Terminal emulator — the window you type in Shell (bash, zsh) — interprets commands Prompt shows user, host, and current directory
+
+8
+00:00:36,530 --> 00:00:40,754
+From the repo root, run module1.sh --check…
+
+9
+00:00:41,104 --> 00:00:45,232
+Navigation commands The following command is shown on screen.
+
+10
+00:00:45,582 --> 00:00:50,718
+Walk through src/ and tb/ like a real RTL project…
+
+11
+00:00:51,068 --> 00:00:53,108
+Files & viewing
+
+12
+00:00:53,458 --> 00:01:03,754
+Files and directories mkdir -p for nested directories cp and mv for copy and rename rm and rm -r — use carefully; avoid rm -rf mistakes
+
+13
+00:01:04,104 --> 00:01:07,992
+head and tail preview files; less for long logs…
+
+14
+00:01:08,342 --> 00:01:12,326
+Use less for interactive scroll and search (/word).
+
+15
+00:01:12,676 --> 00:01:17,716
+Create practice dirs (script) The following command is shown on screen.
+
+16
+00:01:18,066 --> 00:01:20,250
+Help & practice
+
+17
+00:01:20,600 --> 00:01:24,104
+Complete CHECKLIST.md in your own terminal…
+
+18
+00:01:24,454 --> 00:01:28,006
+Next module covers permissions and environment…
+
+19
+00:01:28,356 --> 00:01:46,548
+Exercises (your turn) Hello terminal — pwd, ls, ls -la Directory navigation — unix_practice/ File operations — cp, mv, rm with nano Viewing — head, tail, less on a long file Help — man ls, tab completion
+
+20
+00:01:46,898 --> 00:01:59,690
+Summary & next steps You can navigate and manage files from the shell Run ./scripts/module1.sh --check before Module 2 Next — Module 2: Filesystem, Permissions & Environment

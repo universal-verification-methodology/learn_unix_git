@@ -1,0 +1,39 @@
+[Slide 1] Welcome to Module 1 of learn_unix_git…
+
+[Slide 2] By the end you will navigate the shell confidently…
+
+[Slide 3] You need a Unix-like terminal—Linux, macOS, or WSL2…
+
+[Slide 4] We progress from terminal basics to help and exercises…
+
+[Slide 5] These skills underpin running simulators and reading logs…
+
+[Slide 6] Terminal & navigation
+
+[Slide 7] Shell vs terminal Terminal emulator — the window you type in Shell (bash, zsh) — interprets commands Prompt shows user, host, and current directory
+
+[Slide 8] From the repo root, run module1.sh --check…
+
+[Slide 9] Navigation commands The following command is shown on screen.
+
+[Slide 10] Walk through src/ and tb/ like a real RTL project…
+
+[Slide 11] Files & viewing
+
+[Slide 12] Files and directories mkdir -p for nested directories cp and mv for copy and rename rm and rm -r — use carefully; avoid rm -rf mistakes
+
+[Slide 13] head and tail preview files; less for long logs…
+
+[Slide 14] Use less for interactive scroll and search (/word).
+
+[Slide 15] Create practice dirs (script) The following command is shown on screen.
+
+[Slide 16] Help & practice
+
+[Slide 17] Complete CHECKLIST.md in your own terminal…
+
+[Slide 18] Next module covers permissions and environment…
+
+[Slide 19] Exercises (your turn) Hello terminal — pwd, ls, ls -la Directory navigation — unix_practice/ File operations — cp, mv, rm with nano Viewing — head, tail, less on a long file Help — man ls, tab completion
+
+[Slide 20] Summary & next steps You can navigate and manage files from the shell Run ./scripts/module1.sh --check before Module 2 Next — Module 2: Filesystem, Permissions & Environment
