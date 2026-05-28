@@ -1,0 +1,35 @@
+module: 6
+course: learn_unix_git
+assets:
+- id: learning_path
+  type: diagram
+  file: assets/diagrams/learning_path.png
+  source: assets/diagrams/learning_path.mmd
+  generator: render_diagrams.sh
+  slides:
+  - 4
+  license: learn_unix_git course materials
+- id: module_check
+  type: screenshot
+  file: assets/screenshots/module_check.png
+  capture_command: ./scripts/module6.sh --check
+  cwd: .
+  slides:
+  - 7
+  expect_stdout_contains: All required checks passed
+- id: git_version
+  type: screenshot
+  file: assets/screenshots/git_version.png
+  capture_command: git --version
+  cwd: .
+  slides:
+  - 9
+  expect_stdout_contains: git version
+- id: git_help
+  type: screenshot
+  file: assets/screenshots/git_help.png
+  capture_command: git help -a 2>/dev/null | head -5
+  cwd: .
+  slides:
+  - 10
+  expect_stdout_contains: git

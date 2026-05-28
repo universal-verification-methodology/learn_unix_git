@@ -1,0 +1,19 @@
+# Reference — copy entries into manifest.yaml as you add assets
+module: 1
+course: learn_unix_git
+assets:
+  - id: learning_path
+    type: diagram
+    file: assets/diagrams/learning_path.png
+    source: assets/diagrams/learning_path.mmd
+    generator: "render_diagrams.sh"
+    slides: [4]
+    license: "Author — course materials"
+
+  - id: module_demo
+    type: screenshot
+    file: assets/screenshots/module_demo.png
+    capture_command: "./scripts/module1.sh --help"
+    cwd: "."
+    expect_stdout_contains: "usage"
+    slides: [6]

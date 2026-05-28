@@ -1,6 +1,22 @@
 # Scripts
 
-Scripts for running module checks, demos, scaffolds, and Git (including submodule) helpers.
+Scripts for running module checks, demos, scaffolds, Git helpers, and **slides/PDF/video** generation.
+
+## Media scripts
+
+| Script | Purpose |
+|--------|---------|
+| `build_all_media.sh` | Build **all** modules: pptx → pdf → video |
+| `verify_all_media.sh` | Verify outlines, assets, and deliverables |
+| `generate_media_outlines.py` | Regenerate `media/moduleN/outline.yaml` (modules 2–8) |
+
+```bash
+./scripts/build_all_media.sh              # full build
+./scripts/build_all_media.sh --module 3   # one module
+./scripts/verify_all_media.sh             # quick check
+```
+
+Outputs: `media/moduleN/slides.pptx`, `slides.pdf`, `video.mp4`. See [media/README.md](../media/README.md) and [media/INDEX.md](../media/INDEX.md).
 
 ## Module scripts
 

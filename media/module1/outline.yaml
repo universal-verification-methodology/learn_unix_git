@@ -1,0 +1,138 @@
+title: "Module 1 — Linux & Shell Basics"
+course: learn_unix_git
+module: 1
+subtitle: "Get comfortable with the Unix terminal and basic file operations"
+footer: "learn_unix_git / Module 1"
+slides:
+  - type: title
+    title: "Module 1"
+    subtitle: "Linux & Shell Basics"
+
+  - type: bullets
+    title: "Learning objectives"
+    bullets:
+      - "Open a terminal and identify your working directory"
+      - "Navigate with cd, pwd, and ls"
+      - "Create, copy, move, and delete files safely"
+      - "View text with cat, less, head, and tail"
+      - "Use man and --help to explore commands"
+
+  - type: bullets
+    title: "Prerequisites"
+    bullets:
+      - "Unix-like environment (Linux, macOS, or WSL2)"
+      - "Ability to open a terminal and type commands"
+      - "No prior shell experience required"
+
+  - type: image
+    title: "Module learning path"
+    image: assets/diagrams/learning_path.png
+    caption: "Topics build from terminal basics toward project navigation"
+
+  - type: bullets
+    title: "Why this matters for verification"
+    bullets:
+      - "Run simulators, scripts, and makefiles from the shell"
+      - "Move between src/, tb/, and build/ directories"
+      - "Inspect logs, RTL, and test output as text files"
+
+  - type: section
+    title: "Terminal & navigation"
+
+  - type: bullets
+    title: "Shell vs terminal"
+    bullets:
+      - "Terminal emulator — the window you type in"
+      - "Shell (bash, zsh) — interprets commands"
+      - "Prompt shows user, host, and current directory"
+
+  - type: demo
+    title: "Module 1 self-check"
+    command: "./scripts/module1.sh --check"
+    screenshot: assets/screenshots/module1_check.png
+    expect_stdout_contains: "All required checks passed"
+    notes: "Run from learn_unix_git repo root."
+
+  - type: code
+    title: "Navigation commands"
+    language: bash
+    source_file: docs/MODULE1.md
+    code: |
+      pwd
+      ls
+      ls -la
+      cd ~/projects
+      cd ..
+      cd -
+
+  - type: demo
+    title: "RTL-style project layout"
+    command: "cd module1/examples/navigation/sample_repo && pwd && ls -la && cd src && pwd && ls"
+    screenshot: assets/screenshots/navigation_sample_repo.png
+    notes: "Sample src/ and tb/ layout for verification repos."
+
+  - type: section
+    title: "Files & viewing"
+
+  - type: bullets
+    title: "Files and directories"
+    bullets:
+      - "mkdir -p for nested directories"
+      - "cp and mv for copy and rename"
+      - "rm and rm -r — use carefully; avoid rm -rf mistakes"
+
+  - type: code
+    title: "Exercise scaffold"
+    language: bash
+    source_file: module1/CHECKLIST.md
+    code: |
+      mkdir ~/unix_practice
+      mkdir ~/unix_practice/notes ~/unix_practice/projects
+      cd ~/unix_practice && pwd
+
+  - type: demo
+    title: "Viewing files"
+    command: "head -n 5 module1/examples/viewing/sample_for_viewing.txt && tail -n 3 module1/examples/viewing/sample_for_viewing.txt"
+    screenshot: assets/screenshots/viewing_head_tail.png
+    notes: "Use less for interactive scroll and search (/word)."
+
+  - type: code
+    title: "Create practice dirs (script)"
+    language: bash
+    source_file: scripts/module1.sh
+    code: "./scripts/module1.sh --scaffold"
+
+  - type: section
+    title: "Help & practice"
+
+  - type: bullets
+    title: "Getting help"
+    bullets:
+      - "man ls — full manual (Space, q to quit)"
+      - "ls --help — short option summary"
+      - "Tab completion for commands and paths"
+      - "History with ↑ and ↓ (Ctrl+R in bash)"
+
+  - type: two_column
+    title: "Repo resources"
+    left:
+      - "module1/examples/ — hands-on labs"
+      - "module1/CHECKLIST.md — exercises"
+      - "./scripts/module1.sh — check & demo"
+    right: assets/diagrams/learning_path.png
+
+  - type: bullets
+    title: "Exercises (your turn)"
+    bullets:
+      - "Hello terminal — pwd, ls, ls -la"
+      - "Directory navigation — unix_practice/"
+      - "File operations — cp, mv, rm with nano"
+      - "Viewing — head, tail, less on a long file"
+      - "Help — man ls, tab completion"
+
+  - type: bullets
+    title: "Summary & next steps"
+    bullets:
+      - "You can navigate and manage files from the shell"
+      - "Run ./scripts/module1.sh --check before Module 2"
+      - "Next — Module 2: Filesystem, Permissions & Environment"

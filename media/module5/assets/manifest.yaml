@@ -1,0 +1,37 @@
+module: 5
+course: learn_unix_git
+assets:
+- id: learning_path
+  type: diagram
+  file: assets/diagrams/learning_path.png
+  source: assets/diagrams/learning_path.mmd
+  generator: render_diagrams.sh
+  slides:
+  - 4
+  license: learn_unix_git course materials
+- id: module_check
+  type: screenshot
+  file: assets/screenshots/module_check.png
+  capture_command: ./scripts/module5.sh --check
+  cwd: .
+  slides:
+  - 7
+  expect_stdout_contains: All required checks passed
+- id: project_tree
+  type: screenshot
+  file: assets/screenshots/project_tree.png
+  capture_command: cd module5/examples/project_structure/sample_project && find .
+    -type f | head -8
+  cwd: .
+  slides:
+  - 9
+  expect_stdout_contains: src
+- id: tar_list
+  type: screenshot
+  file: assets/screenshots/tar_list.png
+  capture_command: cd module5/examples/tar_archives && tar czf /tmp/m5_demo.tar.gz
+    demo_dir/ && tar tzf /tmp/m5_demo.tar.gz | head -5
+  cwd: .
+  slides:
+  - 10
+  expect_stdout_contains: demo_dir

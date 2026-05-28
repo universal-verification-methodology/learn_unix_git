@@ -1,0 +1,68 @@
+title: Module 3 — Processes, Pipes & Redirection
+course: learn_unix_git
+module: 3
+subtitle: Manage programs and connect commands with pipes and redirection
+footer: learn_unix_git / Module 3
+slides:
+- type: title
+  title: Module 3
+  subtitle: Processes, Pipes & Redirection
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Stop foreground jobs with Ctrl+C
+  - Redirect stdout/stderr to log files
+  - Chain commands with pipes
+  - Search simulator logs with grep
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Module 2 (permissions, executable scripts)
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - 'Save build/sim output: command > run.log 2>&1'
+  - 'Filter errors: grep -i error run.log'
+  - Exit status $? indicates success or failure
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module3.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Capture full log
+  source_file: docs/MODULE3.md
+  code: './scripts/run_tests.sh > logs/run.log 2>&1
+
+    tail -f logs/run.log'
+- type: demo
+  title: Searching logs
+  command: cd module3/examples/pipes && grep ERROR sample.log
+  screenshot: assets/screenshots/grep_errors.png
+- type: demo
+  title: Redirection demo
+  command: cd module3/examples/redirection && chmod u+x print_both.sh && ./print_both.sh
+    > /tmp/m3_out.log 2> /tmp/m3_err.log && head -2 /tmp/m3_out.log
+  screenshot: assets/screenshots/redirection.png
+- type: section
+  title: Practice
+- type: code
+  title: Exercise scaffold
+  code: ./scripts/module3.sh --scaffold
+- type: bullets
+  title: Exercises
+  bullets:
+  - grep ERROR on ~/unix_practice/sample.log
+  - Try 2>&1 | tee debug.log
+  - Check echo $? after a command
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - Processes and exit status
+  - Redirection and pipes
+  - 'Next: Module 4 — shell scripting'
+  - 'Next: Module 4: Shell Productivity & Basic Scripting'

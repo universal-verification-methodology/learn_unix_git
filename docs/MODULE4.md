@@ -22,6 +22,8 @@ From the repo root:
 
 See [module4/README.md](../module4/README.md) for examples and quick start.
 
+- **Slides & video**: [slides.pptx](../media/module4/slides.pptx) · [slides.pdf](../media/module4/slides.pdf) · [video.mp4](../media/module4/video.mp4) — regenerate: `./scripts/build_all_media.sh --module 4`
+
 ---
 
 ## Overview

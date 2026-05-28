@@ -1,0 +1,70 @@
+title: Module 6 — Git Basics for Course Work
+course: learn_unix_git
+module: 6
+subtitle: Track changes and work with course repositories
+footer: learn_unix_git / Module 6
+slides:
+- type: title
+  title: Module 6
+  subtitle: Git Basics for Course Work
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Explain working tree, staging, and commits
+  - Use status, add, commit, log, diff
+  - Clone and push to GitHub
+  - Write a useful .gitignore for build artifacts
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Module 5 (project structure)
+  - git installed
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - Course work is submitted via Git
+  - Never commit build/ or large waveforms
+  - Small focused commits are easier to review
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module6.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Basic workflow
+  source_file: docs/MODULE6.md
+  code: 'git status
+
+    git add file.sv
+
+    git commit -m "Add counter testbench"'
+- type: demo
+  title: Git installation
+  command: git --version
+  screenshot: assets/screenshots/git_version.png
+- type: demo
+  title: Exploring git help
+  command: git help -a 2>/dev/null | head -5
+  screenshot: assets/screenshots/git_help.png
+- type: section
+  title: Practice
+- type: code
+  title: Exercise scaffold
+  code: ./scripts/module6.sh --scaffold
+- type: bullets
+  title: Exercises
+  bullets:
+  - Scaffold git_demo and make a commit
+  - Write .gitignore for build/
+  - git log --oneline
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - Local Git workflow
+  - Remotes and GitHub
+  - 'Next: Module 7 — collaboration'
+  - 'Next: Module 7: Advanced Git for Collaboration'

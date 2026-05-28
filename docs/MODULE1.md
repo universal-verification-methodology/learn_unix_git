@@ -22,6 +22,8 @@ From the repo root:
 
 See [module1/README.md](../module1/README.md) for examples and quick start. Examples include: **navigation**, **paths** (absolute vs relative), **file_operations** (cp, mv, mkdir, rm), **viewing** (cat, head, tail, less), **design_files** (RTL-style .v/.sv/.md/.cpp), and **help** (man, --help).
 
+- **Slides & video**: [slides.pptx](../media/module1/slides.pptx) · [slides.pdf](../media/module1/slides.pdf) · [video.mp4](../media/module1/video.mp4) — regenerate: `./scripts/build_all_media.sh --module 1`
+
 ---
 
 ## Overview

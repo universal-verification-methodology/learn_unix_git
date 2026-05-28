@@ -1,0 +1,35 @@
+module: 7
+course: learn_unix_git
+assets:
+- id: learning_path
+  type: diagram
+  file: assets/diagrams/learning_path.png
+  source: assets/diagrams/learning_path.mmd
+  generator: render_diagrams.sh
+  slides:
+  - 4
+  license: learn_unix_git course materials
+- id: module_check
+  type: screenshot
+  file: assets/screenshots/module_check.png
+  capture_command: ./scripts/module7.sh --check
+  cwd: .
+  slides:
+  - 7
+  expect_stdout_contains: All required checks passed
+- id: conflict_sample
+  type: screenshot
+  file: assets/screenshots/conflict_sample.png
+  capture_command: head -15 module7/examples/conflicts/sample_conflict.txt
+  cwd: .
+  slides:
+  - 9
+  expect_stdout_contains: <<<<<<<
+- id: git_branch_help
+  type: screenshot
+  file: assets/screenshots/git_branch_help.png
+  capture_command: git help branch 2>/dev/null | head -8
+  cwd: .
+  slides:
+  - 10
+  expect_stdout_contains: branch

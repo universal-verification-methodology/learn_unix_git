@@ -1,0 +1,66 @@
+title: Module 8 — End-to-End Project Workflow
+course: learn_unix_git
+module: 8
+subtitle: Combine Unix and Git into a repeatable design flow
+footer: learn_unix_git / Module 8
+slides:
+- type: title
+  title: Module 8
+  subtitle: End-to-End Project Workflow
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Bootstrap a project from a template repo
+  - Run scripted build/test flows
+  - Capture and analyze logs
+  - Commit milestones and push for submission
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Modules 1–7 or equivalent experience
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - 'Full loop: edit → run → inspect → commit → push'
+  - Reproducibility matters for grading and debug
+  - Pre-push checks catch common mistakes
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module8.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Run with log capture
+  source_file: module8/examples/template/sample_project/scripts/run_demo.sh
+  code: './scripts/run_demo.sh > logs/run.log 2>&1
+
+    grep -i error logs/run.log'
+- type: demo
+  title: Scripted workflow
+  command: cd module8/examples/template/sample_project && chmod u+x scripts/run_demo.sh
+    && ./scripts/run_demo.sh
+  screenshot: assets/screenshots/sample_project_run.png
+- type: demo
+  title: Log inspection
+  command: grep INFO module8/examples/template/sample_project/logs/run.log 2>/dev/null
+    | head -3
+  screenshot: assets/screenshots/grep_log.png
+- type: section
+  title: Practice
+- type: bullets
+  title: Exercises
+  bullets:
+  - Walk through sample_project/
+  - Make a commit after a script run
+  - Review pre-push checklist in module8
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - Unix + Git + scripts together
+  - You are ready for design courses
+  - Course complete — keep practicing
+  - 'Next: Digital design & verification courses'

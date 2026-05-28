@@ -21,6 +21,8 @@ From the repo root:
 
 See [module8/README.md](../module8/README.md) for examples and quick start. Use `module8/examples/template/sample_project` to try the template, script, and log capture flow.
 
+- **Slides & video**: [slides.pptx](../media/module8/slides.pptx) · [slides.pdf](../media/module8/slides.pdf) · [video.mp4](../media/module8/video.mp4) — regenerate: `./scripts/build_all_media.sh --module 8`
+
 ---
 
 ## Overview

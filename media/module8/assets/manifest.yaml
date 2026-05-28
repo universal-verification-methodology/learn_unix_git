@@ -1,0 +1,37 @@
+module: 8
+course: learn_unix_git
+assets:
+- id: learning_path
+  type: diagram
+  file: assets/diagrams/learning_path.png
+  source: assets/diagrams/learning_path.mmd
+  generator: render_diagrams.sh
+  slides:
+  - 4
+  license: learn_unix_git course materials
+- id: module_check
+  type: screenshot
+  file: assets/screenshots/module_check.png
+  capture_command: ./scripts/module8.sh --check
+  cwd: .
+  slides:
+  - 7
+  expect_stdout_contains: All required checks passed
+- id: sample_project_run
+  type: screenshot
+  file: assets/screenshots/sample_project_run.png
+  capture_command: cd module8/examples/template/sample_project && chmod u+x scripts/run_demo.sh
+    && ./scripts/run_demo.sh
+  cwd: .
+  slides:
+  - 9
+  expect_stdout_contains: Run started
+- id: grep_log
+  type: screenshot
+  file: assets/screenshots/grep_log.png
+  capture_command: grep INFO module8/examples/template/sample_project/logs/run.log
+    2>/dev/null | head -3
+  cwd: .
+  slides:
+  - 10
+  expect_stdout_contains: INFO

@@ -1,0 +1,69 @@
+title: Module 5 — Editors, Projects & Archives
+course: learn_unix_git
+module: 5
+subtitle: Organize projects and package code with tar and zip
+footer: learn_unix_git / Module 5
+slides:
+- type: title
+  title: Module 5
+  subtitle: Editors, Projects & Archives
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Use a consistent src/tb/scripts/build layout
+  - Find files and search with grep -R
+  - Create and extract tar.gz archives
+  - Back up projects before major changes
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Module 4 (basic scripts)
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - RTL projects mirror course repo structure
+  - Exclude build/ from archives and Git
+  - grep -R finds signals across a tree
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module5.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Create archive
+  source_file: docs/MODULE5.md
+  code: 'tar czf project_$(date +%Y%m%d).tar.gz project_dir/
+
+    tar xzf project.tar.gz'
+- type: demo
+  title: Project structure
+  command: cd module5/examples/project_structure/sample_project && find . -type f
+    | head -8
+  screenshot: assets/screenshots/project_tree.png
+- type: demo
+  title: tar archives
+  command: cd module5/examples/tar_archives && tar czf /tmp/m5_demo.tar.gz demo_dir/
+    && tar tzf /tmp/m5_demo.tar.gz | head -5
+  screenshot: assets/screenshots/tar_list.png
+- type: section
+  title: Practice
+- type: code
+  title: Exercise scaffold
+  code: ./scripts/module5.sh --scaffold
+- type: bullets
+  title: Exercises
+  bullets:
+  - Scaffold unix_course_project/
+  - grep -R in sample_project
+  - Create a tar.gz backup
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - Organize src/tb/scripts/build
+  - Archives for sharing
+  - 'Next: Module 6 — Git basics'
+  - 'Next: Module 6: Git Basics for Course Work'

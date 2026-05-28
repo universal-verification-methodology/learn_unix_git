@@ -21,6 +21,8 @@ From the repo root:
 
 Use a practice repo (e.g. `~/unix_practice/git_demo` from Module 6 scaffold) to try branching, merging, and conflicts. See [module7/README.md](../module7/README.md) for examples and quick start.
 
+- **Slides & video**: [slides.pptx](../media/module7/slides.pptx) · [slides.pdf](../media/module7/slides.pdf) · [video.mp4](../media/module7/video.mp4) — regenerate: `./scripts/build_all_media.sh --module 7`
+
 ---
 
 ## Overview

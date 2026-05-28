@@ -1,0 +1,67 @@
+title: Module 2 — Filesystem, Permissions & Environment
+course: learn_unix_git
+module: 2
+subtitle: Understand Unix file types, permissions, and environment variables
+footer: learn_unix_git / Module 2
+slides:
+- type: title
+  title: Module 2
+  subtitle: Filesystem, Permissions & Environment
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Read ls -l output (types, permissions, owner)
+  - Use chmod to make scripts executable safely
+  - Explain HOME, PATH, and which
+  - Fix common permission denied and command not found errors
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Module 1 complete (cd, ls, pwd, basic files)
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - Simulators and tools depend on PATH
+  - Scripts in projects need chmod +x
+  - Dotfiles like .gitignore appear in every repo
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module2.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Make a script executable
+  source_file: module2/CHECKLIST.md
+  code: 'chmod u+x hello.sh
+
+    ./hello.sh'
+- type: demo
+  title: ls -l and permissions
+  command: cd module2/examples/permissions && ls -l hello.sh config.txt
+  screenshot: assets/screenshots/permissions_ls.png
+- type: demo
+  title: Finding commands on PATH
+  command: which bash && which git
+  screenshot: assets/screenshots/which_tools.png
+- type: section
+  title: Practice
+- type: code
+  title: Exercise scaffold
+  code: ./scripts/module2.sh --scaffold
+- type: bullets
+  title: Exercises
+  bullets:
+  - chmod on ~/unix_practice/hello.sh
+  - echo $PATH and which for git
+  - ls -la to see dotfiles in examples/dotfiles
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - File types and rwx permissions
+  - PATH and environment
+  - 'Next: Module 3 — processes & pipes'
+  - 'Next: Module 3: Processes, Pipes & Redirection'

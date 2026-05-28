@@ -1,0 +1,36 @@
+module: 3
+course: learn_unix_git
+assets:
+- id: learning_path
+  type: diagram
+  file: assets/diagrams/learning_path.png
+  source: assets/diagrams/learning_path.mmd
+  generator: render_diagrams.sh
+  slides:
+  - 4
+  license: learn_unix_git course materials
+- id: module_check
+  type: screenshot
+  file: assets/screenshots/module_check.png
+  capture_command: ./scripts/module3.sh --check
+  cwd: .
+  slides:
+  - 7
+  expect_stdout_contains: All required checks passed
+- id: grep_errors
+  type: screenshot
+  file: assets/screenshots/grep_errors.png
+  capture_command: cd module3/examples/pipes && grep ERROR sample.log
+  cwd: .
+  slides:
+  - 9
+  expect_stdout_contains: ERROR
+- id: redirection
+  type: screenshot
+  file: assets/screenshots/redirection.png
+  capture_command: cd module3/examples/redirection && chmod u+x print_both.sh && ./print_both.sh
+    > /tmp/m3_out.log 2> /tmp/m3_err.log && head -2 /tmp/m3_out.log
+  cwd: .
+  slides:
+  - 10
+  expect_stdout_contains: stdout

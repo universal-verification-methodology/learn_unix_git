@@ -1,0 +1,34 @@
+module: 1
+course: learn_unix_git
+assets:
+  - id: learning_path
+    type: diagram
+    file: assets/diagrams/learning_path.png
+    source: assets/diagrams/learning_path.mmd
+    generator: "render_diagrams.sh"
+    slides: [4, 18]
+    license: "learn_unix_git course materials — author"
+
+  - id: module1_check
+    type: screenshot
+    file: assets/screenshots/module1_check.png
+    capture_command: "./scripts/module1.sh --check"
+    cwd: "."
+    expect_stdout_contains: "All required checks passed"
+    slides: [8]
+
+  - id: navigation_sample_repo
+    type: screenshot
+    file: assets/screenshots/navigation_sample_repo.png
+    capture_command: "cd module1/examples/navigation/sample_repo && pwd && ls -la && cd src && pwd && ls"
+    cwd: "."
+    expect_stdout_contains: "src"
+    slides: [10]
+
+  - id: viewing_head_tail
+    type: screenshot
+    file: assets/screenshots/viewing_head_tail.png
+    capture_command: "head -n 5 module1/examples/viewing/sample_for_viewing.txt && tail -n 3 module1/examples/viewing/sample_for_viewing.txt"
+    cwd: "."
+    expect_stdout_contains: "sample file"
+    slides: [14]

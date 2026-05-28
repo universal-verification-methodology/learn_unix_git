@@ -1,0 +1,67 @@
+title: Module 4 — Shell Productivity & Basic Scripting
+course: learn_unix_git
+module: 4
+subtitle: Automate repetitive commands with bash scripts
+footer: learn_unix_git / Module 4
+slides:
+- type: title
+  title: Module 4
+  subtitle: Shell Productivity & Basic Scripting
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Use history and Ctrl+R effectively
+  - Write scripts with shebang and chmod +x
+  - Pass arguments with $1 and $@
+  - Apply set -e and quoted variables
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Module 3 (redirection, pipes)
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - Wrap compile/sim steps in scripts/
+  - Course module scripts are the pattern to follow
+  - Quote variables to avoid word-splitting bugs
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module4.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Minimal script
+  source_file: module4/examples/script_basics/say_hello.sh
+  code: '#!/usr/bin/env bash
+
+    echo "Hello from script"'
+- type: demo
+  title: First bash script
+  command: cd module4/examples/script_basics && chmod u+x say_hello.sh && ./say_hello.sh
+  screenshot: assets/screenshots/say_hello.png
+- type: demo
+  title: Positional parameters
+  command: cd module4/examples/arguments && chmod u+x greet.sh && ./greet.sh Student
+  screenshot: assets/screenshots/greet_args.png
+- type: section
+  title: Practice
+- type: code
+  title: Exercise scaffold
+  code: ./scripts/module4.sh --scaffold
+- type: bullets
+  title: Exercises
+  bullets:
+  - Run say_hello.sh and greet.sh from scaffold
+  - Add an alias ll='ls -alF'
+  - Write a loop over *.log
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - Scripts automate design flows
+  - History and aliases save time
+  - 'Next: Module 5 — projects & archives'
+  - 'Next: Module 5: Editors, Projects & Archives'

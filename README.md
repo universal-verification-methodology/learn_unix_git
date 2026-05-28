@@ -55,6 +55,7 @@ This project is a complete educational resource for learning Unix and Git in the
 - ✅ **GitHub-Oriented**: Clone, commit, push, pull, branches, merge, PRs
 - ✅ **Digital Design Context**: Project layout (src/, tb/, build/), logs, and submission flow
 - ✅ **Safe Practices**: Quoting, .gitignore, restore, clean rebuild, pre-submission checks
+- ✅ **Slides & video**: Per-module `slides.pptx`, `slides.pdf`, and `video.mp4` under `media/` (see `./scripts/build_all_media.sh`)
 
 ## 📚 Prerequisites
 
@@ -94,7 +95,17 @@ chmod +x scripts/*.sh
 ./scripts/module1.sh --scaffold # create ~/unix_practice for exercises
 ```
 
-### 4. Start Learning
+### 4. Build slides, PDF, and video (optional)
+
+Pre-built decks live under `media/moduleN/`. To regenerate all modules:
+
+```bash
+./scripts/build_all_media.sh
+```
+
+See [media/README.md](media/README.md) and [media/INDEX.md](media/INDEX.md) for flags and download links.
+
+### 5. Start Learning
 
 Begin with [Module 1: Linux & Shell Basics](docs/MODULE1.md) and follow the modules sequentially. Each module doc has a **Command Reference (Detailed)** section for command lookup.
 
@@ -120,7 +131,12 @@ learn_unix_git/
 │   └── ...
 ├── module2/ … module8/        # Same layout: CHECKLIST.md, EXAMPLES.md, README.md, examples/
 │
+├── media/                     # Generated slides, PDF, video (see media/README.md)
+│   └── module1/ … module8/     # outline.yaml, slides.pptx, slides.pdf, video.mp4
+│
 ├── scripts/                   # Per-module scripts + Git helpers
+│   ├── build_all_media.sh        # Build all module decks + PDF + video
+│   ├── generate_media_outlines.py # Regenerate outline.yaml (modules 2–8)
 │   ├── module1.sh … module8.sh   # --check, --demo, --scaffold
 │   ├── git-submodule-init.sh     # init/update submodules (after clone)
 │   ├── git-submodule-add.sh      # add submodule (url [path])

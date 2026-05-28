@@ -1,0 +1,64 @@
+title: Module 7 — Advanced Git for Collaboration
+course: learn_unix_git
+module: 7
+subtitle: Branches, merges, conflicts, and submodules
+footer: learn_unix_git / Module 7
+slides:
+- type: title
+  title: Module 7
+  subtitle: Advanced Git for Collaboration
+- type: bullets
+  title: Learning objectives
+  bullets:
+  - Create and switch feature branches
+  - Merge branches and resolve conflicts
+  - Understand submodules for shared IP
+  - Use git blame and bisect conceptually
+- type: bullets
+  title: Prerequisites
+  bullets:
+  - Module 6 (add, commit, push)
+- type: image
+  title: Learning path
+  image: assets/diagrams/learning_path.png
+- type: bullets
+  title: Course context
+  bullets:
+  - Team labs use branches per feature
+  - Conflicts happen when two people edit same lines
+  - Verification IP may live in submodules
+- type: section
+  title: Core topics
+- type: demo
+  title: Self-check
+  command: ./scripts/module7.sh --check
+  screenshot: assets/screenshots/module_check.png
+- type: code
+  title: Feature branch
+  source_file: docs/MODULE7.md
+  code: 'git checkout -b feature/lab2
+
+    git merge main'
+- type: demo
+  title: Merge conflict format
+  command: head -15 module7/examples/conflicts/sample_conflict.txt
+  screenshot: assets/screenshots/conflict_sample.png
+- type: demo
+  title: Branches
+  command: git help branch 2>/dev/null | head -8
+  screenshot: assets/screenshots/git_branch_help.png
+- type: section
+  title: Practice
+- type: bullets
+  title: Exercises
+  bullets:
+  - Create branch in git_demo
+  - Resolve sample_conflict.txt on paper
+  - Try git submodule update --init
+- type: bullets
+  title: Summary & next steps
+  bullets:
+  - Branching and merging
+  - Conflicts and submodules
+  - 'Next: Module 8 — end-to-end workflow'
+  - 'Next: Module 8: End-to-End Project Workflow'

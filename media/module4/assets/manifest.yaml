@@ -1,0 +1,37 @@
+module: 4
+course: learn_unix_git
+assets:
+- id: learning_path
+  type: diagram
+  file: assets/diagrams/learning_path.png
+  source: assets/diagrams/learning_path.mmd
+  generator: render_diagrams.sh
+  slides:
+  - 4
+  license: learn_unix_git course materials
+- id: module_check
+  type: screenshot
+  file: assets/screenshots/module_check.png
+  capture_command: ./scripts/module4.sh --check
+  cwd: .
+  slides:
+  - 7
+  expect_stdout_contains: All required checks passed
+- id: say_hello
+  type: screenshot
+  file: assets/screenshots/say_hello.png
+  capture_command: cd module4/examples/script_basics && chmod u+x say_hello.sh &&
+    ./say_hello.sh
+  cwd: .
+  slides:
+  - 9
+  expect_stdout_contains: Hello
+- id: greet_args
+  type: screenshot
+  file: assets/screenshots/greet_args.png
+  capture_command: cd module4/examples/arguments && chmod u+x greet.sh && ./greet.sh
+    Student
+  cwd: .
+  slides:
+  - 10
+  expect_stdout_contains: Student
