@@ -1,0 +1,30 @@
+# Demo commands for slide capture (non-interactive / scaffolded).
+# See ~/.cursor/skills/module-to-slides-video/templates/outline_overrides.yaml.example
+
+module1:
+  demos:
+    touch:
+      expect: "newfile.txt"
+
+module4:
+  demos:
+    case_statement:
+      expect: "Hi there"
+
+module6:
+  demos:
+    init_clone:
+      command: "./scripts/module6.sh --scaffold 2>/dev/null; cd ~/unix_practice/git_demo && git status"
+      expect: "git"
+
+module7:
+  demos:
+    conflicts:
+      command: "head -15 module7/examples/conflicts/sample_conflict.txt"
+      expect: "<<<<<<<"
+
+module8:
+  demos:
+    submission:
+      command: "head -12 module8/examples/submission/README.md"
+      expect: "Submission"
