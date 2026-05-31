@@ -51,29 +51,29 @@ Files and directories mkdir -p for nested directories cp and mv for copy and ren
 head and tail preview files; less for long logs…
 
 14
-00:01:08,342 --> 00:01:12,326
-Use less for interactive scroll and search (/word).
+00:01:08,342 --> 00:01:16,142
+Viewing files Watch the terminal demonstration on screen. Use less for interactive scroll and search (/word).
 
 15
-00:01:12,676 --> 00:01:17,716
+00:01:16,492 --> 00:01:21,532
 Create practice dirs (script) The following command is shown on screen.
 
 16
-00:01:18,066 --> 00:01:20,250
+00:01:21,882 --> 00:01:24,066
 Help & practice
 
 17
-00:01:20,600 --> 00:01:24,104
+00:01:24,416 --> 00:01:27,920
 Complete CHECKLIST.md in your own terminal…
 
 18
-00:01:24,454 --> 00:01:28,006
+00:01:28,270 --> 00:01:31,822
 Next module covers permissions and environment…
 
 19
-00:01:28,356 --> 00:01:46,548
+00:01:32,172 --> 00:01:50,364
 Exercises (your turn) Hello terminal — pwd, ls, ls -la Directory navigation — unix_practice/ File operations — cp, mv, rm with nano Viewing — head, tail, less on a long file Help — man ls, tab completion
 
 20
-00:01:46,898 --> 00:01:59,690
+00:01:50,714 --> 00:02:03,506
 Summary & next steps You can navigate and manage files from the shell Run ./scripts/module1.sh --check before Module 2 Next — Module 2: Filesystem, Permissions & Environment

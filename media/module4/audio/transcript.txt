@@ -1,10 +1,10 @@
-[Slide 1] Shell Productivity & Basic Scripting Module 4
+[Slide 1] Welcome to Module 4
 
-[Slide 2] Learning objectives Use history and Ctrl+R effectively Write scripts with shebang and chmod +x Pass arguments with $1 and $@ Apply set -e and quoted variables
+[Slide 2] Automate repetitive commands with bash scripts
 
 [Slide 3] Prerequisites Module 3 (redirection, pipes)
 
-[Slide 4] Learning path
+[Slide 4] Walk through diagram
 
 [Slide 5] Course context Wrap compile/sim steps in scripts/ Course module scripts are the pattern to follow Quote variables to avoid word-splitting bugs
 

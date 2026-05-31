@@ -1,55 +1,55 @@
 1
-00:00:00,000 --> 00:00:04,032
-Filesystem, Permissions & Environment Module 2
+00:00:00,000 --> 00:00:02,352
+Welcome to Module 2
 
 2
-00:00:04,382 --> 00:00:17,534
-Learning objectives Read ls -l output (types, permissions, owner) Use chmod to make scripts executable safely Explain HOME, PATH, and which Fix common permission denied and command not found errors
+00:00:02,702 --> 00:00:07,814
+Understand Unix file types, permissions, and environment variables
 
 3
-00:00:17,884 --> 00:00:24,316
+00:00:08,164 --> 00:00:14,596
 Prerequisites Module 1 complete (cd, ls, pwd, basic files)
 
 4
-00:00:24,666 --> 00:00:26,586
-Learning path
+00:00:14,946 --> 00:00:17,082
+Walk through diagram
 
 5
-00:00:26,936 --> 00:00:35,816
+00:00:17,432 --> 00:00:26,312
 Course context Simulators and tools depend on PATH Scripts in projects need chmod +x Dotfiles like .gitignore appear in every repo
 
 6
-00:00:36,166 --> 00:00:38,158
+00:00:26,662 --> 00:00:28,654
 Core topics
 
 7
-00:00:38,508 --> 00:00:42,276
+00:00:29,004 --> 00:00:32,772
 Self-check Watch the terminal demonstration on screen.
 
 8
-00:00:42,626 --> 00:00:46,946
+00:00:33,122 --> 00:00:37,442
 Make a script executable The following command is shown on screen.
 
 9
-00:00:47,296 --> 00:00:51,736
+00:00:37,792 --> 00:00:42,232
 ls -l and permissions Watch the terminal demonstration on screen.
 
 10
-00:00:52,086 --> 00:00:56,694
+00:00:42,582 --> 00:00:47,190
 Finding commands on PATH Watch the terminal demonstration on screen.
 
 11
-00:00:57,044 --> 00:00:58,796
+00:00:47,540 --> 00:00:49,292
 Practice
 
 12
-00:00:59,146 --> 00:01:03,154
+00:00:49,642 --> 00:00:53,650
 Exercise scaffold The following command is shown on screen.
 
 13
-00:01:03,504 --> 00:01:14,064
+00:00:54,000 --> 00:01:04,560
 Exercises chmod on ~/unix_practice/hello.sh echo $PATH and which for git ls -la to see dotfiles in examples/dotfiles
 
 14
-00:01:14,414 --> 00:01:26,798
+00:01:04,910 --> 00:01:17,294
 Summary & next steps File types and rwx permissions PATH and environment Next: Module 3 — processes & pipes Next: Module 3: Processes, Pipes & Redirection

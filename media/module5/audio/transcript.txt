@@ -1,10 +1,10 @@
-[Slide 1] Editors, Projects & Archives Module 5
+[Slide 1] Welcome to Module 5
 
-[Slide 2] Learning objectives Use a consistent src/tb/scripts/build layout Find files and search with grep -R Create and extract tar.gz archives Back up projects before major changes
+[Slide 2] Organize projects and package code with tar and zip
 
 [Slide 3] Prerequisites Module 4 (basic scripts)
 
-[Slide 4] Learning path
+[Slide 4] Walk through diagram
 
 [Slide 5] Course context RTL projects mirror course repo structure Exclude build/ from archives and Git grep -R finds signals across a tree
 

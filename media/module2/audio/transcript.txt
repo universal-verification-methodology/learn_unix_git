@@ -1,10 +1,10 @@
-[Slide 1] Filesystem, Permissions & Environment Module 2
+[Slide 1] Welcome to Module 2
 
-[Slide 2] Learning objectives Read ls -l output (types, permissions, owner) Use chmod to make scripts executable safely Explain HOME, PATH, and which Fix common permission denied and command not found errors
+[Slide 2] Understand Unix file types, permissions, and environment variables
 
 [Slide 3] Prerequisites Module 1 complete (cd, ls, pwd, basic files)
 
-[Slide 4] Learning path
+[Slide 4] Walk through diagram
 
 [Slide 5] Course context Simulators and tools depend on PATH Scripts in projects need chmod +x Dotfiles like .gitignore appear in every repo
 

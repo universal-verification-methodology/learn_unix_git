@@ -1,55 +1,55 @@
 1
-00:00:00,000 --> 00:00:03,408
-Git Basics for Course Work Module 6
+00:00:00,000 --> 00:00:02,472
+Welcome to Module 6
 
 2
-00:00:03,758 --> 00:00:15,254
-Learning objectives Explain working tree, staging, and commits Use status, add, commit, log, diff Clone and push to GitHub Write a useful .gitignore for build artifacts
+00:00:02,822 --> 00:00:06,398
+Track changes and work with course repositories
 
 3
-00:00:15,604 --> 00:00:20,332
+00:00:06,748 --> 00:00:11,476
 Prerequisites Module 5 (project structure) git installed
 
 4
-00:00:20,682 --> 00:00:22,602
-Learning path
+00:00:11,826 --> 00:00:13,962
+Walk through diagram
 
 5
-00:00:22,952 --> 00:00:30,968
+00:00:14,312 --> 00:00:22,328
 Course context Course work is submitted via Git Never commit build/ or large waveforms Small focused commits are easier to review
 
 6
-00:00:31,318 --> 00:00:33,310
+00:00:22,678 --> 00:00:24,670
 Core topics
 
 7
-00:00:33,660 --> 00:00:37,428
+00:00:25,020 --> 00:00:28,788
 Self-check Watch the terminal demonstration on screen.
 
 8
-00:00:37,778 --> 00:00:41,618
+00:00:29,138 --> 00:00:32,978
 Basic workflow The following command is shown on screen.
 
 9
-00:00:41,968 --> 00:00:46,048
+00:00:33,328 --> 00:00:37,408
 Git installation Watch the terminal demonstration on screen.
 
 10
-00:00:46,398 --> 00:00:50,646
+00:00:37,758 --> 00:00:42,006
 Exploring git help Watch the terminal demonstration on screen.
 
 11
-00:00:50,996 --> 00:00:52,748
+00:00:42,356 --> 00:00:44,108
 Practice
 
 12
-00:00:53,098 --> 00:00:57,106
+00:00:44,458 --> 00:00:48,466
 Exercise scaffold The following command is shown on screen.
 
 13
-00:00:57,456 --> 00:01:04,392
+00:00:48,816 --> 00:00:55,752
 Exercises Scaffold git_demo and make a commit Write .gitignore for build/ git log --oneline
 
 14
-00:01:04,742 --> 00:01:14,942
+00:00:56,102 --> 00:01:06,302
 Summary & next steps Local Git workflow Remotes and GitHub Next: Module 7 — collaboration Next: Module 7: Advanced Git for Collaboration

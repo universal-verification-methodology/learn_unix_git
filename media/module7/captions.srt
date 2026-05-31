@@ -1,51 +1,51 @@
 1
-00:00:00,000 --> 00:00:03,408
-Advanced Git for Collaboration Module 7
+00:00:00,000 --> 00:00:02,376
+Welcome to Module 7
 
 2
-00:00:03,758 --> 00:00:13,574
-Learning objectives Create and switch feature branches Merge branches and resolve conflicts Understand submodules for shared IP Use git blame and bisect conceptually
+00:00:02,726 --> 00:00:07,046
+Branches, merges, conflicts, and submodules
 
 3
-00:00:13,924 --> 00:00:18,316
+00:00:07,396 --> 00:00:11,788
 Prerequisites Module 6 (add, commit, push)
 
 4
-00:00:18,666 --> 00:00:20,586
-Learning path
+00:00:12,138 --> 00:00:14,274
+Walk through diagram
 
 5
-00:00:20,936 --> 00:00:29,696
+00:00:14,624 --> 00:00:23,384
 Course context Team labs use branches per feature Conflicts happen when two people edit same lines Verification IP may live in submodules
 
 6
-00:00:30,046 --> 00:00:32,038
+00:00:23,734 --> 00:00:25,726
 Core topics
 
 7
-00:00:32,388 --> 00:00:36,156
+00:00:26,076 --> 00:00:29,844
 Self-check Watch the terminal demonstration on screen.
 
 8
-00:00:36,506 --> 00:00:40,154
+00:00:30,194 --> 00:00:33,842
 Feature branch The following command is shown on screen.
 
 9
-00:00:40,504 --> 00:00:45,016
+00:00:34,192 --> 00:00:38,704
 Merge conflict format Watch the terminal demonstration on screen.
 
 10
-00:00:45,366 --> 00:00:48,990
+00:00:39,054 --> 00:00:42,678
 Branches Watch the terminal demonstration on screen.
 
 11
-00:00:49,340 --> 00:00:51,092
+00:00:43,028 --> 00:00:44,780
 Practice
 
 12
-00:00:51,442 --> 00:01:00,130
+00:00:45,130 --> 00:00:53,818
 Exercises Create branch in git_demo Resolve sample_conflict.txt on paper Try git submodule update --init
 
 13
-00:01:00,480 --> 00:01:10,896
+00:00:54,168 --> 00:01:04,584
 Summary & next steps Branching and merging Conflicts and submodules Next: Module 8 — end-to-end workflow Next: Module 8: End-to-End Project Workflow

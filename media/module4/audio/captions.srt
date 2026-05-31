@@ -1,55 +1,55 @@
 1
-00:00:00,000 --> 00:00:03,936
-Shell Productivity & Basic Scripting Module 4
+00:00:00,000 --> 00:00:02,376
+Welcome to Module 4
 
 2
-00:00:04,286 --> 00:00:15,422
-Learning objectives Use history and Ctrl+R effectively Write scripts with shebang and chmod +x Pass arguments with $1 and $@ Apply set -e and quoted variables
+00:00:02,726 --> 00:00:06,158
+Automate repetitive commands with bash scripts
 
 3
-00:00:15,772 --> 00:00:19,828
+00:00:06,508 --> 00:00:10,564
 Prerequisites Module 3 (redirection, pipes)
 
 4
-00:00:20,178 --> 00:00:22,098
-Learning path
+00:00:10,914 --> 00:00:13,050
+Walk through diagram
 
 5
-00:00:22,448 --> 00:00:31,736
+00:00:13,400 --> 00:00:22,688
 Course context Wrap compile/sim steps in scripts/ Course module scripts are the pattern to follow Quote variables to avoid word-splitting bugs
 
 6
-00:00:32,086 --> 00:00:34,078
+00:00:23,038 --> 00:00:25,030
 Core topics
 
 7
-00:00:34,428 --> 00:00:38,196
+00:00:25,380 --> 00:00:29,148
 Self-check Watch the terminal demonstration on screen.
 
 8
-00:00:38,546 --> 00:00:42,290
+00:00:29,498 --> 00:00:33,242
 Minimal script The following command is shown on screen.
 
 9
-00:00:42,640 --> 00:00:46,864
+00:00:33,592 --> 00:00:37,816
 First bash script Watch the terminal demonstration on screen.
 
 10
-00:00:47,214 --> 00:00:51,606
+00:00:38,166 --> 00:00:42,558
 Positional parameters Watch the terminal demonstration on screen.
 
 11
-00:00:51,956 --> 00:00:53,708
+00:00:42,908 --> 00:00:44,660
 Practice
 
 12
-00:00:54,058 --> 00:00:58,066
+00:00:45,010 --> 00:00:49,018
 Exercise scaffold The following command is shown on screen.
 
 13
-00:00:58,416 --> 00:01:08,136
+00:00:49,368 --> 00:00:59,088
 Exercises Run say_hello.sh and greet.sh from scaffold Add an alias ll='ls -alF' Write a loop over *.log
 
 14
-00:01:08,486 --> 00:01:20,990
+00:00:59,438 --> 00:01:11,942
 Summary & next steps Scripts automate design flows History and aliases save time Next: Module 5 — projects & archives Next: Module 5: Editors, Projects & Archives

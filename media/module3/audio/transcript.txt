@@ -1,10 +1,10 @@
-[Slide 1] Processes, Pipes & Redirection Module 3
+[Slide 1] Welcome to Module 3
 
-[Slide 2] Learning objectives Stop foreground jobs with Ctrl+C Redirect stdout/stderr to log files Chain commands with pipes Search simulator logs with grep
+[Slide 2] Manage programs and connect commands with pipes and redirection
 
 [Slide 3] Prerequisites Module 2 (permissions, executable scripts)
 
-[Slide 4] Learning path
+[Slide 4] Walk through diagram
 
 [Slide 5] Course context Save build/sim output: command > run.log 2>&1 Filter errors: grep -i error run.log Exit status $? indicates success or failure
 

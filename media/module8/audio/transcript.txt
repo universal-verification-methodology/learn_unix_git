@@ -1,10 +1,10 @@
-[Slide 1] End-to-End Project Workflow Module 8
+[Slide 1] Welcome to Module 8
 
-[Slide 2] Learning objectives Bootstrap a project from a template repo Run scripted build/test flows Capture and analyze logs Commit milestones and push for submission
+[Slide 2] Combine Unix and Git into a repeatable design flow
 
 [Slide 3] Prerequisites Modules 1–7 or equivalent experience
 
-[Slide 4] Learning path
+[Slide 4] Walk through diagram
 
 [Slide 5] Course context Full loop: edit → run → inspect → commit → push Reproducibility matters for grading and debug Pre-push checks catch common mistakes
 

@@ -1,10 +1,10 @@
-[Slide 1] Git Basics for Course Work Module 6
+[Slide 1] Welcome to Module 6
 
-[Slide 2] Learning objectives Explain working tree, staging, and commits Use status, add, commit, log, diff Clone and push to GitHub Write a useful .gitignore for build artifacts
+[Slide 2] Track changes and work with course repositories
 
 [Slide 3] Prerequisites Module 5 (project structure) git installed
 
-[Slide 4] Learning path
+[Slide 4] Walk through diagram
 
 [Slide 5] Course context Course work is submitted via Git Never commit build/ or large waveforms Small focused commits are easier to review
 

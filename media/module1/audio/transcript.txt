@@ -24,7 +24,7 @@
 
 [Slide 13] head and tail preview files; less for long logs…
 
-[Slide 14] Use less for interactive scroll and search (/word).
+[Slide 14] Viewing files Watch the terminal demonstration on screen. Use less for interactive scroll and search (/word).
 
 [Slide 15] Create practice dirs (script) The following command is shown on screen.
 
