@@ -2,6 +2,9 @@
 
 Practice **cloning** a project and **inspecting** its layout so you know where source, tests, scripts, and build output live.
 
+For a **live GitHub template** with the same idea (plus Make / PR / submodule), use  
+[unix-git-practice](https://github.com/universal-verification-methodology/unix-git-practice) — see [SANDBOX.md](../../../../SANDBOX.md).
+
 ## Layout
 
 ```

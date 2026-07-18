@@ -8,6 +8,8 @@ This final module connects all previous Unix and Git topics into one workflow: c
 
 - **Full module doc**: [docs/MODULE8.md](../docs/MODULE8.md)
 - **Run Module 8 demo/check**: From repo root, run `./scripts/module8.sh`
+- **End-to-end on GitHub**: [unix-git-practice](https://github.com/universal-verification-methodology/unix-git-practice) · see [SANDBOX.md](../SANDBOX.md)
+- **Browser pre-push lab** (if you have `platform/`): `platform/tools/workflow/`
 
 ## Directory Layout
 

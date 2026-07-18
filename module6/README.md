@@ -8,6 +8,7 @@ This module introduces Git as a local version control system and shows how to us
 
 - **Full module doc**: [docs/MODULE6.md](../docs/MODULE6.md)
 - **Run Module 6 demo/check**: From repo root, run `./scripts/module6.sh`
+- **Real GitHub practice**: [SANDBOX.md](../SANDBOX.md) · [unix-git-practice](https://github.com/universal-verification-methodology/unix-git-practice) (template)
 
 ## Directory Layout
 
@@ -37,13 +38,15 @@ module6/
    ./scripts/module6.sh --check
    ```
 
-2. **Create a practice repo** (so you can try commands safely):
+2. **Create a practice repo** (local scaffold **or** GitHub template):
    ```bash
    ./scripts/module6.sh --scaffold
    cd ~/unix_practice/git_demo
    git status
-   git log --oneline
    ```
+   Or use the org template:  
+   https://github.com/universal-verification-methodology/unix-git-practice → **Use this template**  
+   (details: [SANDBOX.md](../SANDBOX.md))
 
 3. **Try status and diff** (in your practice repo or this repo):
    ```bash

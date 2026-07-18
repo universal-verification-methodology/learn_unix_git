@@ -8,6 +8,8 @@ This module builds on Git basics to cover branching, merging and conflicts, subm
 
 - **Full module doc**: [docs/MODULE7.md](../docs/MODULE7.md)
 - **Run Module 7 demo/check**: From repo root, run `./scripts/module7.sh`
+- **Real GitHub practice**: [SANDBOX.md](../SANDBOX.md) · template + [unix-git-shared-ip](https://github.com/universal-verification-methodology/unix-git-shared-ip) submodule
+- **Browser labs** (if you have `platform/`): remotes checklist, conflicts, blame/bisect under `platform/tools/`
 
 ## Directory Layout
 

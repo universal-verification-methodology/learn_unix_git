@@ -1,24 +1,31 @@
-# Learn Unix & Git: Shell and Version Control for Digital Design
+# Learn Unix & Git
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub](https://img.shields.io/badge/GitHub-learn__unix__git-181717?logo=github)](https://github.com/universal-verification-methodology/learn_unix_git)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green?logo=creativecommons&logoColor=white)](https://creativecommons.org/licenses/by/4.0/)
+[![Modules](https://img.shields.io/badge/modules-8-0A9EDC)](docs/)
+[![Sandbox](https://img.shields.io/badge/sandbox-unix--git--practice-orange)](https://github.com/universal-verification-methodology/unix-git-practice)
+[![Domain](https://img.shields.io/badge/domain-Unix%20%7C%20Git%20%7C%20digital%20design-blue)](https://github.com/universal-verification-methodology/learn_unix_git)
 
-Unix, Git, and tooling basics for students taking digital design and verification courses. This project provides a complete educational path from shell fundamentals through Git collaboration and end-to-end project workflow. Each **module** has **CHECKLIST.md** (exercise checklist), **EXAMPLES.md** (index of hands-on examples with "Try these"), and **README.md** (quick start). Each **module doc** in `docs/` includes topics, exercises, assessment, and a **Command Reference (Detailed)** with descriptions of every command: what it does, how it works, common options, and usage examples.
+**learn_unix_git** is a complete educational path from shell fundamentals through Git collaboration and end-to-end project workflow for digital design and verification students. Each **module** ships `CHECKLIST.md`, `EXAMPLES.md`, and `README.md`; each guide in `docs/` includes topics, exercises, assessment, and a **Command Reference (Detailed)**.
 
-## 📋 Table of Contents
+For **real GitHub remotes, PRs, Make, and submodules**, use the org template [`unix-git-practice`](https://github.com/universal-verification-methodology/unix-git-practice) (see [SANDBOX.md](SANDBOX.md)). Optional browser labs live under `platform/tools/` in the learning monorepo.
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [Prerequisites](#-prerequisites)
-- [Quick Start](#-quick-start)
-- [Project Structure](#-project-structure)
-- [Documentation](#-documentation)
-- [Modules](#-modules)
-- [Usage](#-usage)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Support](#-support)
+## Table of contents
 
-## 🎯 Overview
+- [Overview](#overview)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Quick start](#quick-start)
+- [GitHub practice sandbox](#github-practice-sandbox)
+- [Project structure](#project-structure)
+- [Documentation](#documentation)
+- [Modules](#modules)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
+
+## Overview
 
 This project is a complete educational resource for learning Unix and Git in the context of digital design and verification. It provides:
 
@@ -28,6 +35,7 @@ This project is a complete educational resource for learning Unix and Git in the
 - **Automated Scripts**: Self-check, demo, and scaffold scripts for each module
 - **Full Documentation**: Topics, exercises, assessment, and learning outcomes
 - **Course Alignment**: Structure and workflows that match typical digital design courses
+- **Live sandbox**: Template repo for push/PR/submodule practice without touching this curriculum tree
 
 ### Why Unix & Git?
 
@@ -43,21 +51,22 @@ This project is a complete educational resource for learning Unix and Git in the
 - **Practice**: Hands-on commands and scripts with real examples
 - **Reference**: Detailed command reference in each module for lookup and review
 - **Progressive**: Builds from basic navigation to full project-and-Git workflow
+- **Split surfaces**: Local examples here · browser concept labs in `platform/` · real remotes on `unix-git-practice`
 
-## ✨ Features
+## Features
 
-- ✅ **8 Modules**: Complete path from shell basics to end-to-end workflow
-- ✅ **Per-module layout**: CHECKLIST.md (exercises), EXAMPLES.md (example index with "Try these"), README.md (quick start)
-- ✅ **Command Reference (Detailed)**: Every command documented in each module doc (what/how/syntax/options/examples/tips)
-- ✅ **Practical Examples**: Navigation, files, permissions, pipes, scripts, archives, Git, submodules
-- ✅ **Scripts per Module**: `--check`, `--demo`, `--scaffold` (where applicable)
-- ✅ **Exercises & Assessment**: Hands-on tasks and CHECKLIST.md for each module
-- ✅ **GitHub-Oriented**: Clone, commit, push, pull, branches, merge, PRs
-- ✅ **Digital Design Context**: Project layout (src/, tb/, build/), logs, and submission flow
-- ✅ **Safe Practices**: Quoting, .gitignore, restore, clean rebuild, pre-submission checks
-- ✅ **Slides & video**: Per-module `slides.pptx`, `slides.pdf`, and `video.mp4` under `media/` (see `./scripts/build_all_media.sh`)
+- **8 Modules**: Complete path from shell basics to end-to-end workflow
+- **Per-module layout**: CHECKLIST.md (exercises), EXAMPLES.md (example index with "Try these"), README.md (quick start)
+- **Command Reference (Detailed)**: Every command documented in each module doc (what/how/syntax/options/examples/tips)
+- **Practical Examples**: Navigation, files, permissions, pipes, scripts, archives, Git, submodules
+- **Scripts per Module**: `--check`, `--demo`, `--scaffold` (where applicable)
+- **Exercises & Assessment**: Hands-on tasks and CHECKLIST.md for each module
+- **GitHub-Oriented**: Clone, commit, push, pull, branches, merge, PRs
+- **Digital Design Context**: Project layout (src/, tb/, build/), logs, and submission flow
+- **Safe Practices**: Quoting, .gitignore, restore, clean rebuild, pre-submission checks
+- **Slides & video**: Per-module `slides.pptx`, `slides.pdf`, and `video.mp4` under `media/` (see `./scripts/build_all_media.sh`)
 
-## 📚 Prerequisites
+## Prerequisites
 
 ### Required Knowledge
 
@@ -72,13 +81,14 @@ This project is a complete educational resource for learning Unix and Git in the
 - **Git**: Git installed (`git --version` works) for Modules 6–8
 - **Optional**: GitHub account for remote examples and submission practice
 
-## 🚀 Quick Start
+## Quick start
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/universal-verification-methodology/learn_unix_git.git
 cd learn_unix_git
+git submodule update --init --recursive   # if demos need nested repos
 ```
 
 ### 2. Make Scripts Executable
@@ -109,7 +119,26 @@ See [media/README.md](media/README.md) and [media/INDEX.md](media/INDEX.md) for 
 
 Begin with [Module 1: Linux & Shell Basics](docs/MODULE1.md) and follow the modules sequentially. Each module doc has a **Command Reference (Detailed)** section for command lookup.
 
-## 📁 Project Structure
+## GitHub practice sandbox
+
+Curriculum examples stay in this repo. For writable remotes / PRs / Make / submodules:
+
+| Repo | Role |
+|------|------|
+| [unix-git-practice](https://github.com/universal-verification-methodology/unix-git-practice) | Student **template** |
+| [unix-git-shared-ip](https://github.com/universal-verification-methodology/unix-git-shared-ip) | Shared-IP **submodule** |
+
+```bash
+# Prefer: Use this template on GitHub, then:
+git clone --recurse-submodules https://github.com/<YOU>/unix-git-practice.git
+cd unix-git-practice
+make test
+bash scripts/check_ready.sh
+```
+
+Full index: **[SANDBOX.md](SANDBOX.md)**.
+
+## Project structure
 
 ```
 learn_unix_git/
@@ -147,7 +176,7 @@ learn_unix_git/
 └── README.md                  # This file
 ```
 
-## 📖 Documentation
+## Documentation
 
 The `docs/` directory contains the syllabus and module guides. Each module doc includes:
 
@@ -183,7 +212,7 @@ The `docs/` directory contains the syllabus and module guides. Each module doc i
 - **[MODULE8.md](docs/MODULE8.md)**: End-to-End Project Workflow  
   - Clone template, run scripts from root, redirect logs, inspect with tail/less/grep, iterative edit→run→commit loop, branching, pre-submission checks (git status, git clean -fdx in a copy), push and verify on GitHub
 
-## 🎓 Modules
+## Modules
 
 ### Module 1: Linux & Shell Basics
 
@@ -233,7 +262,7 @@ Combine Unix and Git: clone a template, run scripts, capture and inspect logs, d
 
 **Quick Start**: `./scripts/module8.sh --check` | `--demo`
 
-## 💻 Usage
+## Usage
 
 ### Per-Module Scripts
 
@@ -268,7 +297,7 @@ Helper scripts for Git submodules (see [scripts/README.md](scripts/README.md)):
 
 For any command introduced in a module, open that module’s doc and go to the **Command Reference (Detailed)** section. There you’ll find what it does, how it works, syntax, options, examples, and tips.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome. This project follows practices suited to educational material:
 
@@ -277,7 +306,7 @@ Contributions are welcome. This project follows practices suited to educational 
 3. **Scripts**: Preserve `--check`, `--demo`, `--scaffold` behavior; document new options.
 4. **Structure**: Follow the existing module layout (docs/, moduleN/, scripts/).
 
-## 📄 License
+## License
 
 This work is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)**. See [LICENSE](LICENSE) in this repository for the license text and a link to the full legal code.
 
@@ -285,10 +314,10 @@ This work is licensed under the **Creative Commons Attribution 4.0 International
 
 ### What this means
 
-- ✅ **You may:** Share and adapt the material for any purpose, including commercially.
-- 📝 **You must:** Give appropriate credit, link to the license, and indicate if changes were made.
+- **You may:** Share and adapt the material for any purpose, including commercially.
+- **You must:** Give appropriate credit, link to the license, and indicate if changes were made.
 
-## 📞 Support
+## Support
 
 For questions or issues:
 
@@ -298,7 +327,5 @@ For questions or issues:
 4. Open an issue for bugs or suggestions.
 
 ---
-
-**Happy Learning! 🚀**
 
 Start with [Module 1: Linux & Shell Basics](docs/MODULE1.md).

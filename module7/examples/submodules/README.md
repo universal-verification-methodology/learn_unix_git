@@ -21,6 +21,10 @@ git submodule update --init --recursive
 
 Then inspect: `ls module7/examples/submodules/demo_repo`, `cat module7/examples/submodules/demo_repo/README`.
 
+**Course sandbox (org templates):** for a full parent + shared-IP pair on GitHub, see [SANDBOX.md](../../../SANDBOX.md) —
+[unix-git-practice](https://github.com/universal-verification-methodology/unix-git-practice) embeds
+[unix-git-shared-ip](https://github.com/universal-verification-methodology/unix-git-shared-ip) at `external/shared-ip`.
+
 ## 1. What are submodules?
 
 A **submodule** is another Git repository embedded inside your project at a specific path. Common uses:
